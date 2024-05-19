@@ -14,7 +14,7 @@ const NavMobile = ({closeNav,showNav}:Props) => {
     <div>
       
     
-    <div className={`fixed top-0 ${navOpenStyle} transform transition-all duration-500 z-[10000] left-0 ring-0 bg-black opacity-70 w-[100vw] h-[100vh]`}>
+    <div className={`fixed top-0 ${navOpenStyle} transform transition-all duration-500 z-[10000] left-0 right-0 bg-black opacity-70 w-[100vw] h-[100vh]`}>
      
     </div>
     <ul className={`text-white ${navOpenStyle} fixed flex items-center flex-col h-[100%] justify-center transform transition-all duration-300 delay-300 w-[60%] bg-red-600
