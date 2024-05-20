@@ -22,7 +22,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%); */
+}
+
+.heading__mini {
+  @apply text-[17px] text-white opacity-75;
+}
+
+.heading__primary {
+  @apply mt-[0.6rem] p-2 sm:p-0 leading-[3.5rem] text-white text-[27px] md:text-[30px] lg:text-[38px] xl:text-[45px];
 }
 
   

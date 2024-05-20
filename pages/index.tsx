@@ -1,4 +1,5 @@
 
+import AboutMe from '@/components/AboutMe'
 import Hero from '@/components/Hero'
 import Nav from '@/components/Nav'
 import NavMobile from '@/components/NavMobile'
@@ -13,8 +14,9 @@ const Homepage = () => {
     <div className='overflow-hidden'>
       <NavMobile showNav={showNav} closeNav={closeNavHandler} />
       <Nav openNav ={showNavHandler} />
-      {/* HERO */}
       <Hero />
+      {/* ABOUTME */}
+      <AboutMe />
     </div>
   )
 }
