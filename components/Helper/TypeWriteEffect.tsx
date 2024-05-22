@@ -13,7 +13,7 @@ const TypeWriteEffect = () => {
         1000,
         'a Graphics Designer',
         1000,
-        'a Mern Stack Developer',
+        'a Video Editor',
         1000
       ]}
       wrapper="span"

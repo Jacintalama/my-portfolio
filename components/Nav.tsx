@@ -41,10 +41,10 @@ const Nav = ({ openNav }: Props) => {
                         <a className='nav__link' href='#'>About</a>
                     </li>
                     <li>
-                        <a className='nav__link' href='#'>Experience</a>
+                        <a className='nav__link' href='#'>Projects</a>
                     </li>
                     <li>
-                        <a className='nav__link' href='#'>Projects</a>
+                        <a className='nav__link' href='#'>Skills</a>
                     </li>
                     <li>
                         <a className='nav__link' href='#'>Contact</a>
