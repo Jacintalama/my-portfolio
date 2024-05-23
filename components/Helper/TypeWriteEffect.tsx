@@ -6,9 +6,9 @@ const TypeWriteEffect = () => {
   return (
     <TypeAnimation
       sequence={[
-        // Same substring at the start will only be typed out once, initially
+       
         'a React Developer',
-        1000, // wait 1s before replacing 
+        1000,
         'a Next Js Developer',
         1000,
         'a Graphics Designer',

@@ -30,7 +30,6 @@ const Homepage = () => {
       <NavMobile showNav={showNav} closeNav={closeNavHandler} />
       <Nav openNav ={showNavHandler} />
       <Hero />
-      {/* ABOUTME */}
       <AboutMe />
       <Services />
       <Skills />
