@@ -11,7 +11,7 @@ const Projects = () => {
             </h1>
         </div>
         <div className='pt-[5rem] w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem] items-center'>
-            <div>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='100'>
               <ProjectsCard 
                 title='GSCWD Hydrolic Analysis' 
                 num='01' 
@@ -20,7 +20,7 @@ const Projects = () => {
                 description='My Team Project during our OJT in Water District General Santos City, we create a comprehensive hydrolic analysis using epanetJS features.' 
               />
             </div>
-            <div>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
               <ProjectsCard 
                 title='Online Job Application' 
                 num='02' 
@@ -29,7 +29,7 @@ const Projects = () => {
                 description='My Capstone Project on my 4th level college with this i learn full stack somehow using PHP Laravel and mySQL.' 
               />
             </div>
-            <div>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
               <ProjectsCard 
                 title='Capstone Poster' 
                 num='03' 
@@ -38,7 +38,7 @@ const Projects = () => {
                 description='PSITS REGIONAL 2024 event and I am participant as Capstone Poster of our school.' 
               />
             </div>
-            <div>
+            <div data-aos='fade-up'  data-aos-delay='300'>
               <ProjectsCard 
                 title='Covid-19 Poster' 
                 num='04' 

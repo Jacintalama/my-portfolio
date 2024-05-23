@@ -6,9 +6,21 @@ import Nav from '@/components/Nav'
 import NavMobile from '@/components/NavMobile'
 import Services from '@/components/Projects'
 import Skills from '@/components/Skills'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Homepage = () => {
+
+  useEffect (()=>{
+    AOS.init({
+      duration:1000,
+      easing:'ease',
+      once:true,
+      anchorPlacement:'top-bottom'
+    })
+  },[])
   const [showNav,setShowNav] = useState(false)
   const showNavHandler = () => setShowNav(true)
   const closeNavHandler = () => setShowNav(false)
