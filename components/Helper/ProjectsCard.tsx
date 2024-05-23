@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface Props {
@@ -13,7 +14,7 @@ const ProjectsCard = ({ num, title, link, imageSrc, description }: Props) => {
 
     return (
         <div className='bg-black custom__services z-[100] relative transform round-2x1 text-center p-6 shadow-md'>
-            <img src={imageSrc} alt={title} className="w-full h-48 object-cover mb-4" /> 
+            <Image src={imageSrc} alt={title} className="w-full h-48 object-cover mb-4" /> 
            
             <h1 className='text-[25px] relative z-[1] text-white mt-[1rem]'>
                 {title}

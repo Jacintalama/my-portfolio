@@ -7,7 +7,7 @@ const Skills = () => {
             <div className='grid w-[80%] mx-auto grid-cols-1 lg:grid-cols-7 gap-[2rem] items-center'>
                 <div className='col-span-3'>
                     <p className='heading__mini'>My Skills</p>
-                    <h1 className='heading__primary'>Let's Explore <span className='text-yellow-400'>Skills</span> & Experience
+                    <h1 className='heading__primary'>Lets Explore <span className='text-yellow-400'>Skills</span> & Experience
                     </h1>
                     <p className='text-[15px] mb-[1.5rem] text-white opacity-70 mt-[1.5rem]' >With a diverse set of skills in both development and design, I bring a unique blend of technical expertise and creative flair. From building dynamic web applications using React and Laravel to crafting visually appealing graphics with Illustrator and Photoshop, my skill set is designed to deliver high-quality, engaging digital experiences.</p>
                 

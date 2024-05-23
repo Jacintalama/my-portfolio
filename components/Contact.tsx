@@ -20,21 +20,21 @@ const Contact = () => {
             <span className='text-yellow-400'>Contact</span> me
           </h1>
           <p data-aos='zoom-in' data-aos-delay='800' className='text-[15px] text-white mt-[1rem] opacity-75'>
-            If you'd like to collaborate or have any inquiries, I look forward to connecting with you and exploring how we can work together to bring your ideas to life.
+            If youd like to collaborate or have any inquiries, I look forward to connecting with you and exploring how we can work together to bring your ideas to life.
           </p>
           <h1 data-aos='fade-right' data-aos-delay='900' className='mt-[2rem] mb-[2rem] text-[30px] text-white font-bold'>
             +63 951 110 6262
-            <FontAwesomeIcon 
-              icon={faCopy} 
-              className='ml-2 cursor-pointer' 
+            <FontAwesomeIcon
+              icon={faCopy}
+              className='ml-2 cursor-pointer'
               onClick={() => copyToClipboard('+63 951 110 6262')}
             />
           </h1>
           <h1 data-aos='fade-right' data-aos-delay='900' className='mt-[2rem] mb-[2rem] text-[30px] text-white font-bold'>
             alamajacintg04@gmail.com
-            <FontAwesomeIcon 
-              icon={faCopy} 
-              className='ml-2 cursor-pointer' 
+            <FontAwesomeIcon
+              icon={faCopy}
+              className='ml-2 cursor-pointer'
               onClick={() => copyToClipboard('alamajacintg04@gmail.com')}
             />
           </h1>
