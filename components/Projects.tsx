@@ -20,7 +20,7 @@ const Projects = () => {
                 description='My Team Project during our OJT in Water District General Santos City, we create a comprehensive hydrolic analysis using epanetJS features.' 
               />
             </div>
-            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
+            {/* <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
               <ProjectsCard 
                 title='Online Job Application' 
                 num='02' 
@@ -28,7 +28,7 @@ const Projects = () => {
                 imageSrc='/images/online-job-application.png' 
                 description='My Capstone Project on my 4th level college with this i learn full stack somehow using PHP Laravel and mySQL.' 
               />
-            </div>
+            </div> */}
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
               <ProjectsCard 
                 title='Capstone Poster' 
