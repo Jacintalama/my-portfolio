@@ -33,7 +33,7 @@ const Hero = () => {
                                     data-aos='zoom-in'
                                     data-aos-delay='1200'
                                     className='before:ease relative h-12 w-40 overflow-hidden bg-orange-600 text-white font-semibold shadow-2x1 before:absolute before:left-0 before:ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-green-700 before:transition-all before:duration-300 hover:text-white hover:shadow-black hover:before:-rotate-180'
-                                     onClick={() => { window.location.href = 'https://drive.google.com/file/d/1wW7qHS_Uevb9QZ2sBlJgEuZn5T8dAt9m/view?usp=sharing'; }}
+                                     onClick={() => { window.location.href = 'https://drive.google.com/file/d/1QcnWORDOkflYxXGhqeVE0eA4weikcWpj/view?usp=sharing'; }}
                                 >
                                     <span className='relative z-10'>My Resume</span>
                                 </button>
