@@ -40,8 +40,17 @@ const Projects = () => {
             </div>
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
               <ProjectsCard 
-                title='Capstone Poster' 
+                title='Nova Shoes Website Design' 
                 num='03' 
+                link='https://drive.google.com/drive/folders/1RrVm_uXJgp5r-GnzUz_79Eil6iq8bURV?usp=sharing' 
+                imageSrc='/images/shoes.jpg' 
+                description='A UI/UX design for pizza website.' 
+              />
+            </div>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
+              <ProjectsCard 
+                title='Capstone Poster' 
+                num='04' 
                 link='https://drive.google.com/file/d/1w1kwJDxJ6jQ1b0NuGYtTcMyGxB7yDJ2b/view?usp=sharing' 
                 imageSrc='/images/capstoneposter.png' 
                 description='PSITS REGIONAL 2024 event and I am participant as Capstone Poster of our school.' 
@@ -50,7 +59,7 @@ const Projects = () => {
             <div data-aos='fade-up'  data-aos-delay='300'>
               <ProjectsCard 
                 title='Covid-19 Poster' 
-                num='04' 
+                num='05' 
                 link='https://drive.google.com/file/d/1qmeEy8JYNCuDXcxkcKXHUTenWxV-lsL0/view?usp=sharing'
                 imageSrc='/images/Covid19.png' 
                 description='Created at Oct 25, 2020 An informational poster about Covid-19 to stop the madness.' 
