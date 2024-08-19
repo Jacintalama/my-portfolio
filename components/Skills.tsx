@@ -3,7 +3,7 @@ import SkillCard from './Helper/SkillCard'
 
 const Skills = () => {
     return (
-        <div className='pt-[5rem] pb-[3rem] bg-black'>
+        <div id='skills' className='pt-[5rem] pb-[3rem] bg-black'>
             <div className='grid w-[80%] mx-auto grid-cols-1 lg:grid-cols-7 gap-[2rem] items-center'>
                 <div className='col-span-3'>
                     <p className='heading__mini'>My Skills</p>

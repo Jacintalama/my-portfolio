@@ -3,7 +3,7 @@ import ProjectsCard from './Helper/ProjectsCard'
 
 const Projects = () => {
   return (
-    <div className='pt-[5rem] pb-[3rem] bg-[#0b0c13]'>
+    <div id='projects' className='pt-[5rem] pb-[3rem] bg-[#0b0c13]'>
         <div className='text-center'>
             <p className='heading__mini'>Personal project</p>
             <h1 className='heading__primary'>

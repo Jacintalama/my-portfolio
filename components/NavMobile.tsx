@@ -23,16 +23,16 @@ const NavMobile = ({closeNav,showNav}:Props) => {
           <a className='nav__link text-[25px] sm:text-[30px]' href='#'>Home</a>
         </li>
         <li>
-          <a className='nav__link text-[25px] sm:text-[30px]' href='#'>About</a>
+          <a className='nav__link text-[25px] sm:text-[30px]' href='#about'>About</a>
         </li>
-        <li>
+        {/* <li>
           <a className='nav__link text-[25px] sm:text-[30px]' href='#'>Experience</a>
+        </li> */}
+        <li>
+          <a className='nav__link text-[25px] sm:text-[30px]' href='#projects'>Projects</a>
         </li>
         <li>
-          <a className='nav__link text-[25px] sm:text-[30px]' href='#'>Projects</a>
-        </li>
-        <li>
-          <a className='nav__link text-[25px] sm:text-[30px]' href='#'>Contact</a>
+          <a className='nav__link text-[25px] sm:text-[30px]' href='#contact'>Contact</a>
         </li>
         <XMarkIcon onClick={closeNav} className='absolute top-[-1rem] right-[1.4rem] w-[2.2rem] h-[2.2rem] text-white' />
 
