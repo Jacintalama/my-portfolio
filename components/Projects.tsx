@@ -56,33 +56,7 @@ const Projects = () => {
                 description='PSITS REGIONAL 2024 event and I am participant as Capstone Poster of our school.' 
               />
             </div>
-            <div data-aos='fade-up'  data-aos-delay='300'>
-              <ProjectsCard 
-                title='Covid-19 Poster' 
-                num='05' 
-                link='https://drive.google.com/file/d/1qmeEy8JYNCuDXcxkcKXHUTenWxV-lsL0/view?usp=sharing'
-                imageSrc='/images/Covid19.png' 
-                description='Created at Oct 25, 2020 An informational poster about Covid-19 to stop the madness.' 
-              />
-            </div>
-            <div data-aos='fade-up'  data-aos-delay='300'>
-              <ProjectsCard 
-                title='Calendars Ads' 
-                num='05' 
-                link='https://drive.google.com/file/d/1qmeEy8JYNCuDXcxkcKXHUTenWxV-lsL0/view?usp=sharing'
-                imageSrc='/images/' 
-                description='Calendar Design ads 11x17, 17x22, 22x34 inc ' 
-              />
-            </div>
-            <div data-aos='fade-up'  data-aos-delay='300'>
-              <ProjectsCard 
-                title='Covid-19 Poster' 
-                num='05' 
-                link='https://drive.google.com/file/d/1qmeEy8JYNCuDXcxkcKXHUTenWxV-lsL0/view?usp=sharing'
-                imageSrc='/images/' 
-                description='Created at Oct 25, 2020 An informational poster about Covid-19 to stop the madness.' 
-              />
-            </div>
+          
         </div>
     </div>
   )
