@@ -52,6 +52,11 @@ const AboutMe = () => {
                 <p className='text-[20px] text-black font-600'>Project Made</p>
               </div>
 
+              <div data-aos='zoom-in' data-aos-delay='100' className='p-6 text-center bg-yellow-500'>
+                <p className='text-[50px] text-black font-bold'>3</p>
+                <p className='text-[20px] text-black font-600'>Months as Work Experience</p>
+              </div>
+
             </div>
           </div>
         </div>
