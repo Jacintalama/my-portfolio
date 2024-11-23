@@ -20,37 +20,48 @@ const Projects = () => {
                 description='My Team Project during our OJT in Water District General Santos City, we create a comprehensive hydrolic analysis using epanetJS features.' 
               />
             </div>
-            {/* <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
+            
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
               <ProjectsCard 
-                title='Online Job Application' 
+                title='.inp Files for page 1' 
                 num='02' 
-                link='https://drive.google.com/file/d/1w1kwJDxJ6jQ1b0NuGYtTcMyGxB7yDJ2b/view?usp=sharing' 
-                imageSrc='/images/online-job-application.png' 
-                description='My Capstone Project on my 4th level college with this i learn full stack somehow using PHP Laravel and mySQL.' 
+                link='https://drive.google.com/file/d/17ZvQeRUfA9I0KVIecZ-1Eanag_00acWv/view?usp=sharing' 
+                imageSrc='/images/icon.jpg' 
+                description='Download the .inp files and drag and drop it to the system.' 
               />
-            </div> */}
+            </div>
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
               <ProjectsCard 
                 title='Pizza Website Design' 
-                num='02' 
+                num='03' 
                 link='https://drive.google.com/drive/folders/1XDFMyvo756A7y61hmYuyEEJgXyJZekeu?usp=sharing' 
                 imageSrc='/images/HOME 1.jpg' 
                 description='A UI/UX design for pizza website.' 
               />
             </div>
-            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='400'>
               <ProjectsCard 
                 title='Nova Shoes Website Design' 
-                num='03' 
+                num='04' 
                 link='https://drive.google.com/drive/folders/1RrVm_uXJgp5r-GnzUz_79Eil6iq8bURV?usp=sharing' 
                 imageSrc='/images/shoes.jpg' 
                 description='A UI/UX design for pizza website.' 
               />
             </div>
-            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='500'>
+              <ProjectsCard 
+                title='CALENDAR LAYOUT 11x17, 17x22 and 22x34' 
+                num='05' 
+                link='https://drive.google.com/file/d/1w1kwJDxJ6jQ1b0NuGYtTcMyGxB7yDJ2b/view?usp=sharing' 
+                imageSrc='/images/homesol.jpg' 
+                description='This is my project in Printing Services Company' 
+              />
+            </div>
+            {/* NEW */}
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='Capstone Poster' 
-                num='04' 
+                num='06' 
                 link='https://drive.google.com/file/d/1w1kwJDxJ6jQ1b0NuGYtTcMyGxB7yDJ2b/view?usp=sharing' 
                 imageSrc='/images/capstoneposter.png' 
                 description='PSITS REGIONAL 2024 event and I am participant as Capstone Poster of our school.' 
