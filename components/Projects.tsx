@@ -52,19 +52,19 @@ const Projects = () => {
               <ProjectsCard 
                 title='CALENDAR LAYOUT 11x17, 17x22 and 22x34' 
                 num='05' 
-                link='https://drive.google.com/file/d/1w1kwJDxJ6jQ1b0NuGYtTcMyGxB7yDJ2b/view?usp=sharing' 
-                imageSrc='/images/homesol.jpg' 
+                link='https://drive.google.com/drive/folders/1m50TfMoqLCU1_e9a_k0NoyNIlqvGp96D?usp=sharing' 
+                imageSrc='/images/homesol2.jpg' 
                 description='This is my project in Printing Services Company' 
               />
             </div>
             {/* NEW */}
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
-                title='Capstone Poster' 
+                title='ID LAYOUT' 
                 num='06' 
-                link='https://drive.google.com/file/d/1w1kwJDxJ6jQ1b0NuGYtTcMyGxB7yDJ2b/view?usp=sharing' 
-                imageSrc='/images/capstoneposter.png' 
-                description='PSITS REGIONAL 2024 event and I am participant as Capstone Poster of our school.' 
+                link='https://drive.google.com/drive/folders/1GIFOXRgLFF1wybLsBEb1gUQoXNptUSta?usp=sharing' 
+                imageSrc='/images/ID.png' 
+                description='This is my Project ID layout' 
               />
             </div>
           
