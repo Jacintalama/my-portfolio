@@ -67,6 +67,16 @@ const Projects = () => {
                 description='This is my Project ID layout' 
               />
             </div>
+
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
+              <ProjectsCard 
+                title='CALLING CARD' 
+                num='07' 
+                link='https://drive.google.com/drive/folders/1GIFOXRgLFF1wybLsBEb1gUQoXNptUSta?usp=sharing' 
+                imageSrc='/images/JACKIE.jpg' 
+                description='This is my Project ID layout' 
+              />
+            </div>
           
         </div>
     </div>
