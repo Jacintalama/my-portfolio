@@ -72,7 +72,7 @@ const Projects = () => {
               <ProjectsCard 
                 title='CALLING CARD' 
                 num='07' 
-                link='https://drive.google.com/drive/folders/1GIFOXRgLFF1wybLsBEb1gUQoXNptUSta?usp=sharing' 
+                link='https://drive.google.com/drive/folders/1Q6a6ksADDxyrKu3Z0H0XkHk3V83RKEsA?usp=sharing' 
                 imageSrc='/images/JACKIE.jpg' 
                 description='This is my Project ID layout' 
               />
