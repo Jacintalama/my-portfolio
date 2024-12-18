@@ -74,9 +74,19 @@ const Projects = () => {
                 num='07' 
                 link='https://drive.google.com/drive/folders/1Q6a6ksADDxyrKu3Z0H0XkHk3V83RKEsA?usp=sharing' 
                 imageSrc='/images/JACKIE.jpg' 
-                description='This is my Project ID layout' 
+                description='This is my Project Calling Card' 
               />
             </div>
+              {/* Video area */}
+            {/* <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
+              <ProjectsCard 
+                title='Video' 
+                num='07' 
+                link='https://drive.google.com/drive/folders/1Q6a6ksADDxyrKu3Z0H0XkHk3V83RKEsA?usp=sharing' 
+                imageSrc='/images/JACKIE.jpg' 
+                description='This is my Project Video Editing' 
+              />
+            </div> */}
           
         </div>
     </div>
