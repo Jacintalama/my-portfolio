@@ -77,6 +77,26 @@ const Projects = () => {
                 description='This is my Project Calling Card' 
               />
             </div>
+
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
+              <ProjectsCard 
+                title='Posters' 
+                num='07' 
+                link='https://drive.google.com/drive/folders/14T6Y7MgK2I8o2NA1f_3YUDlq4RtcRQgA?usp=sharing' 
+                imageSrc='/images/poster.jpg' 
+                description='This is my Project Posters' 
+              />
+            </div>
+
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
+              <ProjectsCard 
+                title='Mobile design and Product booth' 
+                num='07' 
+                link='https://drive.google.com/drive/folders/1UFO6XRSO0H_y41P3apWEoNqNq-eruU94?usp=sharing' 
+                imageSrc='/images/atlantis.jpg' 
+                description='This is my Project Posters' 
+              />
+            </div>
               {/* Video area */}
             {/* <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
