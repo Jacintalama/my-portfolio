@@ -48,6 +48,13 @@ const Skills = () => {
                             <SkillCard title="workbench" image="/images/mysql.svg" percent="70%" />
                         </div>
 
+                        <div data-aos='flip-left' ata-aos-delay='1100'  >
+                            <SkillCard title="CorelDraw" image="/images/mysql.svg" percent="80%" />
+                        </div>
+                        <div data-aos='flip-left' ata-aos-delay='1100'  >
+                            <SkillCard title="InDesign" image="/images/mysql.svg" percent="85%" />
+                        </div>
+
                     </div>
                 </div>
             </div>

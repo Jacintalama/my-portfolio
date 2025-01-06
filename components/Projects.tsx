@@ -94,7 +94,26 @@ const Projects = () => {
                 num='09' 
                 link='https://drive.google.com/drive/folders/1UFO6XRSO0H_y41P3apWEoNqNq-eruU94?usp=sharing' 
                 imageSrc='/images/atlantis.jpg' 
-                description='This is my Project Posters' 
+                description='This is my Mobile design and Product booth' 
+              />
+            </div>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
+              <ProjectsCard 
+                title='Labels' 
+                num='10' 
+                link='https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing' 
+                imageSrc='/images/labels.jpg' 
+                description='This is my Labels Layout Design' 
+              />
+            </div>
+
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
+              <ProjectsCard 
+                title='Packaging Box Layout' 
+                num='11' 
+                link='https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing' 
+                imageSrc='/images/box.PNG' 
+                description='This is my Box Packaging Design' 
               />
             </div>
               {/* Video area */}
