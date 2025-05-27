@@ -20,11 +20,21 @@ const Projects = () => {
                 description='My Team Project during our OJT in Water District General Santos City, we create a comprehensive hydrolic analysis using epanetJS features.' 
               />
             </div>
+
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='100'>
+              <ProjectsCard 
+                title='SSG Voting System' 
+                num='02' 
+                link='http://everest.stratfordgensan.com/' 
+                imageSrc='/images/SSG.png' 
+                description='I made a project for different school and this is SSG Voting System' 
+              />
+            </div>
             
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='200'>
               <ProjectsCard 
                 title='.inp Files for page 1' 
-                num='02' 
+                num='03' 
                 link='https://drive.google.com/file/d/17ZvQeRUfA9I0KVIecZ-1Eanag_00acWv/view?usp=sharing' 
                 imageSrc='/images/icon.jpg' 
                 description='Download the .inp files and drag and drop it to the system.' 
@@ -33,7 +43,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='300'>
               <ProjectsCard 
                 title='Pizza Website Design' 
-                num='03' 
+                num='04' 
                 link='https://drive.google.com/drive/folders/1XDFMyvo756A7y61hmYuyEEJgXyJZekeu?usp=sharing' 
                 imageSrc='/images/HOME 1.jpg' 
                 description='A UI/UX design for pizza website.' 
@@ -42,7 +52,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='400'>
               <ProjectsCard 
                 title='Nova Shoes Website Design' 
-                num='04' 
+                num='05' 
                 link='https://drive.google.com/drive/folders/1RrVm_uXJgp5r-GnzUz_79Eil6iq8bURV?usp=sharing' 
                 imageSrc='/images/shoes.jpg' 
                 description='A UI/UX design for pizza website.' 
@@ -51,7 +61,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='500'>
               <ProjectsCard 
                 title='CALENDAR LAYOUT 11x17, 17x22 and 22x34' 
-                num='05' 
+                num='06' 
                 link='https://drive.google.com/drive/folders/1m50TfMoqLCU1_e9a_k0NoyNIlqvGp96D?usp=sharing' 
                 imageSrc='/images/homesol2.jpg' 
                 description='This is my project in Printing Services Company' 
@@ -61,7 +71,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='ID LAYOUT' 
-                num='06' 
+                num='07' 
                 link='https://drive.google.com/drive/folders/1GIFOXRgLFF1wybLsBEb1gUQoXNptUSta?usp=sharing' 
                 imageSrc='/images/ID.png' 
                 description='This is my Project ID layout' 
@@ -71,7 +81,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='CALLING CARD' 
-                num='07' 
+                num='08' 
                 link='https://drive.google.com/drive/folders/1Q6a6ksADDxyrKu3Z0H0XkHk3V83RKEsA?usp=sharing' 
                 imageSrc='/images/JACKIE.jpg' 
                 description='This is my Project Calling Card' 
@@ -81,7 +91,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='Posters' 
-                num='08' 
+                num='09' 
                 link='https://drive.google.com/drive/folders/14T6Y7MgK2I8o2NA1f_3YUDlq4RtcRQgA?usp=sharing' 
                 imageSrc='/images/poster.jpg' 
                 description='This is my Project Posters' 
@@ -91,7 +101,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='Mobile design and Product booth' 
-                num='09' 
+                num='10' 
                 link='https://drive.google.com/drive/folders/1UFO6XRSO0H_y41P3apWEoNqNq-eruU94?usp=sharing' 
                 imageSrc='/images/atlantis.jpg' 
                 description='This is my Mobile design and Product booth' 
@@ -100,7 +110,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='Labels' 
-                num='10' 
+                num='11' 
                 link='https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing' 
                 imageSrc='/images/labels.jpg' 
                 description='This is my Labels Layout Design' 
@@ -110,7 +120,7 @@ const Projects = () => {
             <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='600'>
               <ProjectsCard 
                 title='Packaging Box Layout' 
-                num='11' 
+                num='12' 
                 link='https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing' 
                 imageSrc='/images/box.PNG' 
                 description='This is my Box Packaging Design' 

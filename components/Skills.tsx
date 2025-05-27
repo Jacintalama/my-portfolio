@@ -18,7 +18,7 @@ const Skills = () => {
                             <SkillCard title="React" image="/images/react.svg" percent="90%" />
                         </div>
                         <div data-aos='flip-left' ata-aos-delay='200'    >
-                            <SkillCard title="CSS" image="/images/css.svg" percent="87%" />
+                            <SkillCard title="Tailwind CSS" image="/images/tailwind-svgrepo-com.svg" percent="87%" />
                         </div>
                         <div data-aos='flip-left' ata-aos-delay='300'>
                             <SkillCard title="JavaScript" image="/images/js.svg" percent="77%" />
@@ -26,6 +26,20 @@ const Skills = () => {
                         <div data-aos='flip-left' ata-aos-delay='400' >
                             <SkillCard title="TypeScript" image="/images/ts.svg" percent="87%" />
                         </div>
+                        <div data-aos='flip-left' ata-aos-delay='1100'  >
+                            <SkillCard title="Next.js" image="/images/nextjs-icon-svgrepo-com.svg" percent="70%" />
+                        </div>
+                        <div data-aos='flip-left' ata-aos-delay='1100'  >
+                            <SkillCard title="PostgreSQL" image="/images/postgresql-icon.svg" percent="70%" />
+                        </div>
+
+                        <div data-aos='flip-left' ata-aos-delay='1100'  >
+                            <SkillCard title="DJANGO" image="/images/django-svgrepo-com.svg" percent="55%" />
+                        </div>
+                        <div data-aos='flip-left' ata-aos-delay='1100'  >
+                            <SkillCard title="Python" image="/images/python-svgrepo-com.svg" percent="55%" />
+                        </div>
+
                         <div data-aos='flip-left' ata-aos-delay='500'>
                             <SkillCard title="HTML" image="/images/html.svg" percent="67%" />
                         </div>
@@ -44,17 +58,7 @@ const Skills = () => {
                         <div data-aos='flip-left' ata-aos-delay='1000' >
                             <SkillCard title="Photoshop " image="/images/ps.svg" percent="90%" />
                         </div>
-                        <div data-aos='flip-left' ata-aos-delay='1100'  >
-                            <SkillCard title="workbench" image="/images/mysql.svg" percent="70%" />
-                        </div>
-
-                        <div data-aos='flip-left' ata-aos-delay='1100'  >
-                            <SkillCard title="CorelDraw" image="/images/mysql.svg" percent="80%" />
-                        </div>
-                        <div data-aos='flip-left' ata-aos-delay='1100'  >
-                            <SkillCard title="InDesign" image="/images/mysql.svg" percent="85%" />
-                        </div>
-
+                       
                     </div>
                 </div>
             </div>
