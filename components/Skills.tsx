@@ -21,7 +21,7 @@ const Skills = () => {
                             <SkillCard title="Tailwind CSS" image="/images/tailwind-svgrepo-com.svg" percent="87%" />
                         </div>
                         <div data-aos='flip-left' ata-aos-delay='300'>
-                            <SkillCard title="JavaScript" image="/images/js.svg" percent="77%" />
+                            <SkillCard title="JavaScript" image="/images/js.svg" percent="90%" />
                         </div>
                         <div data-aos='flip-left' ata-aos-delay='400' >
                             <SkillCard title="TypeScript" image="/images/ts.svg" percent="87%" />
@@ -58,7 +58,10 @@ const Skills = () => {
                         <div data-aos='flip-left' ata-aos-delay='1000' >
                             <SkillCard title="Photoshop " image="/images/ps.svg" percent="90%" />
                         </div>
-                       
+                        <div data-aos='flip-left' ata-aos-delay='1100'>
+                            <SkillCard title="Claude Code" image="/images/claude-ai-icon.svg" percent="90%" />
+                        </div>
+
                     </div>
                 </div>
             </div>

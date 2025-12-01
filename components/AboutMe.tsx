@@ -54,17 +54,17 @@ const AboutMe = () => {
                 <p className='text-[20px] text-black font-600'>Year Experience as Graphic Design</p>
               </div>
               <div data-aos='zoom-in' data-aos-delay='100' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>1</p>
-                <p className='text-[20px] text-black font-600'>Year Experience as Full Stack Developer</p>
+                <p className='text-[50px] text-black font-bold'>2</p>
+                <p className='text-[20px] text-black font-600'>Years Experience as Full Stack Developer</p>
               </div>
               <div data-aos='zoom-in' data-aos-delay='200' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>12</p>
+                <p className='text-[50px] text-black font-bold'>13</p>
                 <p className='text-[20px] text-black font-600'>Project Made</p>
               </div>
 
               <div data-aos='zoom-in' data-aos-delay='100' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>9</p>
-                <p className='text-[20px] text-black font-600'>Months as Work Experience</p>
+                <p className='text-[50px] text-black font-bold'>1.2</p>
+                <p className='text-[20px] text-black font-600'>Years of Work Experience</p>
               </div>
 
             </div>
