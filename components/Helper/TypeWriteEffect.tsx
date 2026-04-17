@@ -1,24 +1,24 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 
-
 const TypeWriteEffect = () => {
   return (
     <TypeAnimation
       sequence={[
-       
+        'a Full Stack Developer',
+        1000,
+        'a Claude Code Developer',
+        1000,
         'a React Developer',
         1000,
-        'a Next Js Developer',
+        'a Next.js Developer',
         1000,
         'a Graphics Designer',
         1000,
-        'a Video Editor',
-        1000
       ]}
       wrapper="span"
       speed={50}
-      className='xl:text-[50px] lg:text-[40px] sm:text-[35px] text-[25px] text-white font-bold'
+      className='xl:text-[48px] lg:text-[38px] sm:text-[32px] text-[24px] font-heading gradient-text-warm font-bold'
       repeat={Infinity}
     />
   )

@@ -1,72 +1,68 @@
 import { CheckIcon } from '@heroicons/react/16/solid';
 import React from 'react'
 
+const skills = [
+  'Full Stack Development',
+  'Claude Code Systems',
+  'Frontend & React',
+  'UI/UX Design',
+  'Graphic Design',
+  'Video Editing',
+];
+
+const stats = [
+  { value: '3+', label: 'Years Full Stack Dev', delay: 100 },
+  { value: '3', label: 'Years Graphic Design', delay: 200 },
+  { value: '15', label: 'Projects Delivered', delay: 300 },
+  { value: '2+', label: 'Years Work Experience', delay: 400 },
+];
+
 const AboutMe = () => {
   return (
-    <div id='about' className='bg-black pb-[3.5rem]'>
-      <div className='w-[80%] pt-[5rem] sm:pt-[7rem] md:pt-[10rem] mx-auto'>
-        <div className='grid items-center grid-cols-1 lg:grid-cols-2 gap-[2rem]'>
+    <div id='about' className='relative bg-[#0b0e16] pb-[6rem] section-glow overflow-hidden'>
+      {/* Ambient orb */}
+      <div className='ambient-orb w-[350px] h-[350px] bg-[#818cf8] opacity-[0.03] top-[30%] right-[-8%]' />
+
+      <div className='w-[80%] pt-[5rem] sm:pt-[7rem] md:pt-[10rem] mx-auto relative'>
+        <div className='grid items-center grid-cols-1 lg:grid-cols-2 gap-[4rem]'>
           <div>
-            <p className='heading__mini'>About Me</p>
-            <h1 className='heading__primary'>Professional <span className='text-yellow-400'>Website</span> for your business
+            <p data-aos='fade-right' className='heading__mini'>About Me</p>
+            <h1 data-aos='fade-right' data-aos-delay='100' className='heading__primary'>
+              Building <span className='gradient-text'>Professional</span><br />Digital Solutions
             </h1>
-            <p className='text-[15px] mt-[1.3rem] text-white opacity-75'>
-
-            As a graphic designer with a solid foundation in web development, 
-            I bring a modern and innovative approach to creating compelling digital experiences. 
-            My expertise spans frontend development, web development, UI/UX design, logo creation, and video editing. 
-            With a keen eye for aesthetics and functionality, I am dedicated to delivering high-quality, professional websites and visual content tailored to your specific needs,
-            ensuring your business stands out in the digital landscape.
-
+            <p data-aos='fade-up' data-aos-delay='200' className='text-[15px] mt-[1.8rem] text-white/35 leading-[1.8] max-w-[480px]'>
+              Full stack developer with expertise in building modern web applications and automated systems.
+              I combine development skills with Claude Code to create efficient, scalable solutions — from
+              e-commerce platforms to data scraping systems.
             </p>
-            <div className='mt-[2rem] space-y-3'>
-            <div className='flex items-end space-x-4'>
-                <CheckIcon className='w-[2rem] h-[2rem] text-yellow-400' />
-                <p className='text-[18px] text-white'>Graphic Artist</p>
-              </div>
-              <div className='flex items-end space-x-4'>
-                <CheckIcon className='w-[2rem] h-[2rem] text-yellow-400' />
-                <p className='text-[18px] text-white'>Frontend Development</p>
-              </div>
-              <div className='flex items-end space-x-4'>
-                <CheckIcon className='w-[2rem] h-[2rem] text-yellow-400' />
-                <p className='text-[18px] text-white'>Web Development</p>
-              </div>
-              <div className='flex items-end space-x-4'>
-                <CheckIcon className='w-[2rem] h-[2rem] text-yellow-400' />
-                <p className='text-[18px] text-white'>UI/UX Design</p>
-              </div>
-              <div className='flex items-end space-x-4'>
-                <CheckIcon className='w-[2rem] h-[2rem] text-yellow-400' />
-                <p className='text-[18px] text-white'>Logo Maker</p>
-              </div>
-              <div className='flex items-end space-x-4'>
-                <CheckIcon className='w-[2rem] h-[2rem] text-yellow-400' />
-                <p className='text-[18px] text-white'>Video Editor</p>
-              </div>
-
+            <div data-aos='fade-up' data-aos-delay='300' className='mt-[2rem] space-y-3'>
+              {skills.map((skill, i) => (
+                <div key={i} className='flex items-center space-x-3 group'>
+                  <div className='w-5 h-5 rounded-full bg-[#818cf8]/8 border border-[#818cf8]/20 flex items-center justify-center group-hover:bg-[#818cf8]/15 group-hover:border-[#818cf8]/40 transition-all duration-300'>
+                    <CheckIcon className='w-3 h-3 text-[#818cf8]' />
+                  </div>
+                  <p className='text-[14px] text-white/50 group-hover:text-white/80 transition-colors duration-300'>{skill}</p>
+                </div>
+              ))}
             </div>
           </div>
-          <div className='lg:ml-auto'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 items-center gap-[2rem]'>
-              <div data-aos='zoom-in' data-aos-delay='100' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>3</p>
-                <p className='text-[20px] text-black font-600'>Year Experience as Graphic Design</p>
-              </div>
-              <div data-aos='zoom-in' data-aos-delay='100' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>2</p>
-                <p className='text-[20px] text-black font-600'>Years Experience as Full Stack Developer</p>
-              </div>
-              <div data-aos='zoom-in' data-aos-delay='200' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>13</p>
-                <p className='text-[20px] text-black font-600'>Project Made</p>
-              </div>
-
-              <div data-aos='zoom-in' data-aos-delay='100' className='p-6 text-center bg-yellow-500'>
-                <p className='text-[50px] text-black font-bold'>1.2</p>
-                <p className='text-[20px] text-black font-600'>Years of Work Experience</p>
-              </div>
-
+          <div className='lg:ml-auto w-full lg:max-w-[400px]'>
+            <div className='grid grid-cols-2 gap-[1rem]'>
+              {stats.map((stat, i) => (
+                <div
+                  key={i}
+                  data-aos='zoom-in'
+                  data-aos-delay={stat.delay}
+                  className='stat-card p-6 text-center'
+                >
+                  <p className='text-[46px] font-heading gradient-text-warm font-bold leading-none'>
+                    {stat.value}
+                  </p>
+                  <p className='text-[13px] text-white/40 font-medium mt-2 leading-snug'>
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

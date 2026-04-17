@@ -11,26 +11,39 @@ interface Props {
 
 const ProjectsCard = ({ num, title, link, imageSrc, description }: Props) => {
   return (
-    <div className='bg-black custom__services z-[100] relative transform round-2x1 text-center p-6 shadow-md'>
-      <Image 
-        src={imageSrc} 
-        alt={title} 
-        width={600}  // Replace with actual width
-        height={400} // Replace with actual height
-        className="w-full h-48 object-cover mb-4" 
-      />
-      <h1 className='text-[25px] relative z-[1] text-white mt-[1rem]'>
-        {title}
-      </h1>
-      <p className='text-white text-[15px] opacity-60 mt-[0.8rem]'>{description}</p><br />
-      <p className='text-white text-[1.6rem] font-bold absolute top-3 right-4'>{num}</p>
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className='relative flex h-[50px] w-40 items-center justify-center font-semibold overflow-hidden bg-red-500 text-white shadow-2x1 transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-yellow-700 before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56'>
-        <span className='relative z-10'>View Live</span>
-      </a>
+    <div className='project-card group h-full flex flex-col'>
+      <div className='relative overflow-hidden'>
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={600}
+          height={400}
+          className='w-full h-52 object-cover project-image'
+        />
+        <div className='absolute inset-0 bg-gradient-to-t from-[#06080e] via-[#06080e]/20 to-transparent' />
+        <span className='absolute top-4 right-4 text-[12px] font-mono font-semibold text-white bg-[#818cf8]/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10'>
+          {num}
+        </span>
+      </div>
+      <div className='p-6 flex-1 flex flex-col'>
+        <h3 className='text-[18px] text-white/90 font-semibold mb-2 group-hover:text-[#a5b4fc] transition-colors duration-400'>
+          {title}
+        </h3>
+        <p className='text-white/30 text-[13px] leading-[1.7] mb-5 flex-1 line-clamp-3'>
+          {description}
+        </p>
+        <a
+          href={link}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='btn-outline inline-flex items-center gap-2 !px-5 !py-2.5 text-[12px] w-fit'
+        >
+          View Live
+          <svg className='w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
+          </svg>
+        </a>
+      </div>
     </div>
   );
 };

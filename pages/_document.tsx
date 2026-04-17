@@ -4,9 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="font-primary">
+      <body className="font-primary antialiased">
         <Main />
         <NextScript />
+        <div className="noise-overlay" aria-hidden="true" />
       </body>
     </Html>
   );

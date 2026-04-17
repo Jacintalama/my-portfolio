@@ -1,23 +1,16 @@
 import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from "tsparticles-slim";
 
 const Particle = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
-
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
     await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
-      await console.log(container);
+      void container;
     },
     []
   );
@@ -29,71 +22,43 @@ const Particle = () => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          background: {
-            //   color: {
-            //     value: "#0d47a1",
-            //   },
-          },
+          background: {},
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
+              onClick: { enable: true, mode: "push" },
+              onHover: { enable: true, mode: "repulse" },
               resize: true,
             },
             modes: {
-              push: {
-                quantity: 1,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
+              push: { quantity: 1 },
+              repulse: { distance: 150, duration: 0.4 },
             },
           },
           particles: {
-            color: {
-              value: "#ffffff",
-            },
+            color: { value: "#818cf8" },
             links: {
-              color: "#ffffff",
-              distance: 120,
+              color: "#818cf8",
+              distance: 130,
               enable: true,
-              opacity: 0.5,
-              width: 1,
+              opacity: 0.12,
+              width: 0.8,
             },
             move: {
               direction: "none",
               enable: true,
-              outModes: {
-                default: "bounce",
-              },
+              outModes: { default: "bounce" },
               random: false,
-              speed: 4,
+              speed: 1.5,
               straight: false,
             },
             number: {
-              density: {
-                enable: true,
-                area: 500,
-              },
-              value: 30,
+              density: { enable: true, area: 600 },
+              value: 25,
             },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 2, max: 5 },
-            },
+            opacity: { value: 0.25 },
+            shape: { type: "circle" },
+            size: { value: { min: 1, max: 3 } },
           },
           detectRetina: true,
         }}

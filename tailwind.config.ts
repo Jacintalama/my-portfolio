@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
      fontFamily:{
       logo:["Oleo Script", "system-ui"],
-      primary: ["Poppins", "sans-serif"],
+      primary: ["Outfit", "sans-serif"],
+      heading: ["DM Serif Display", "serif"],
      }
     },
   },
