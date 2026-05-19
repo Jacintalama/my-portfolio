@@ -93,10 +93,11 @@ a {
 
   .display-title {
     font-family: 'Archivo', system-ui, sans-serif;
-    font-size: 3.1rem;
+    font-size: 2rem;
     font-weight: 900;
-    line-height: 0.88;
+    line-height: 1;
     letter-spacing: 0;
+    overflow-wrap: break-word;
   }
 
   .section-title {
@@ -175,33 +176,30 @@ a {
 }
 
 @media (min-width: 768px) {
-  @layer components {
-    .section-band {
-      padding-block: 5.75rem;
-    }
+  .section-band {
+    padding-block: 5.75rem;
+  }
 
-    .display-title {
-      font-size: 5.4rem;
-    }
+  .display-title {
+    font-size: 5.1rem;
+    line-height: 0.9;
+  }
 
-    .section-title {
-      font-size: 3.55rem;
-    }
+  .section-title {
+    font-size: 3.55rem;
   }
 }
 
 @media (min-width: 1120px) {
-  @layer components {
-    .section-band {
-      padding-block: 7rem;
-    }
+  .section-band {
+    padding-block: 7rem;
+  }
 
-    .display-title {
-      font-size: 6.8rem;
-    }
+  .display-title {
+    font-size: 6.4rem;
+  }
 
-    .section-title {
-      font-size: 4.25rem;
-    }
+  .section-title {
+    font-size: 4.25rem;
   }
 }

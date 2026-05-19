@@ -9,10 +9,14 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen pt-24 md:pt-28">
       <div className="page-shell">
         <div className="grid min-h-[calc(100vh-7rem)] items-center gap-10 py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
-          <div>
+          <div className="min-w-0">
             <p className="section-kicker mb-5">{hero.eyebrow}</p>
-            <h1 className="display-title max-w-[820px]">{hero.primaryTitle}</h1>
-            <p className="body-copy mt-7 text-[1.05rem] md:text-[1.1rem]">
+            <h1 className="display-title max-w-[820px]" aria-label={hero.primaryTitle}>
+              <span className="block">Developer</span>
+              <span className="block">and visual</span>
+              <span className="block">maker.</span>
+            </h1>
+            <p className="body-copy mt-7 break-words text-[1.05rem] md:text-[1.1rem]">
               {hero.summary}
             </p>
 
@@ -21,11 +25,11 @@ const Hero = () => {
                 href={hero.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="print-button"
+                className="print-button w-full sm:w-auto"
               >
                 My Resume
               </a>
-              <a href="#projects" className="print-button secondary">
+              <a href="#projects" className="print-button secondary w-full sm:w-auto">
                 View Selected Work
               </a>
             </div>
@@ -47,14 +51,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative min-w-0">
             <div className="ruled-panel relative overflow-hidden p-3 shadow-[12px_12px_0_var(--oxide-soft)]">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] bg-[color:var(--paper-soft)]">
                 <Image
                   src={hero.portrait}
                   alt="Portrait of Jacint Alama"
                   fill
-                  priority
                   sizes="(max-width: 1024px) 90vw, 460px"
                   className="object-cover"
                 />
