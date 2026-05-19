@@ -33,6 +33,7 @@ yarn-error.log*
 
 # local brainstorming mockups
 .superpowers/
+.worktrees/
 
 # typescript
 *.tsbuildinfo
