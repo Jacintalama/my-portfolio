@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "name": "Jacint Alama",
+    "eyebrow": "Full stack developer + visual maker",
+    "primaryTitle": "Developer and visual maker.",
+    "summary": "I build practical web systems, automation workflows, and visual assets for businesses that need work shipped clearly and quickly.",
+    "portrait": "/images/hero.png",
+    "resumeUrl": "https://drive.google.com/file/d/1eXj_LQnXSE_IeFG04zPGH4W2XimlXUxW/view?usp=sharing"
+  },
+  "stats": [
+    {
+      "value": "3+",
+      "label": "Years full stack development"
+    },
+    {
+      "value": "15",
+      "label": "Projects delivered"
+    },
+    {
+      "value": "3",
+      "label": "Years graphic design"
+    },
+    {
+      "value": "AI",
+      "label": "Claude Code workflow builder"
+    }
+  ],
+  "selectedWork": [
+    {
+      "title": "Waffenplatz",
+      "category": "Marketplace platform",
+      "image": "/images/waffenplatz.png",
+      "url": "https://waffenplatz.ch/",
+      "summary": "Swiss weapons marketplace experience with dealer discovery, storefront flow, and production-facing UI work."
+    },
+    {
+      "title": "RAVEN WEAPON",
+      "category": "E-commerce storefront",
+      "image": "/images/ravenweapon.png",
+      "url": "https://ravenweapon.ch/",
+      "summary": "Configurable Shopware storefront for a Swiss family business selling mission-ready weapons and accessories."
+    },
+    {
+      "title": "Petrol Stations Directory",
+      "category": "Automation system",
+      "image": "/images/bern.png",
+      "url": "https://petrolstations-directory-935253236645.europe-west6.run.app/",
+      "summary": "Data scraping and directory system for collecting and displaying petrol station records across Bern and Zurich."
+    },
+    {
+      "title": "GSCWD Hydraulic Analysis",
+      "category": "Engineering tool",
+      "image": "/images/gscwd.png",
+      "url": "https://mrtankee.vercel.app/",
+      "summary": "OJT team project for water district hydraulic analysis using EPANET-related workflow features."
+    },
+    {
+      "title": "SSG Voting System",
+      "category": "School system",
+      "image": "/images/SSG.png",
+      "url": "http://everest.stratfordgensan.com/",
+      "summary": "Voting system built for school election workflows with a simple public-facing experience."
+    },
+    {
+      "title": "Pizza Website Design",
+      "category": "UI design",
+      "image": "/images/HOME 1.jpg",
+      "url": "https://drive.google.com/drive/folders/1XDFMyvo756A7y61hmYuyEEJgXyJZekeu?usp=sharing",
+      "summary": "Food website design concept focused on visual hierarchy, product browsing, and conversion layout."
+    }
+  ],
+  "designArchive": [
+    {
+      "title": ".inp Files Resource",
+      "type": "Utility file",
+      "image": "/images/icon.jpg",
+      "url": "https://drive.google.com/file/d/17ZvQeRUfA9I0KVIecZ-1Eanag_00acWv/view?usp=sharing"
+    },
+    {
+      "title": "Nova Shoes Website Design",
+      "type": "UI design",
+      "image": "/images/shoes.jpg",
+      "url": "https://drive.google.com/drive/folders/1RrVm_uXJgp5r-GnzUz_79Eil6iq8bURV?usp=sharing"
+    },
+    {
+      "title": "Calendar Layout",
+      "type": "Print layout",
+      "image": "/images/homesol2.jpg",
+      "url": "https://drive.google.com/drive/folders/1m50TfMoqLCU1_e9a_k0NoyNIlqvGp96D?usp=sharing"
+    },
+    {
+      "title": "ID Layout",
+      "type": "Print layout",
+      "image": "/images/ID.png",
+      "url": "https://drive.google.com/drive/folders/1GIFOXRgLFF1wybLsBEb1gUQoXNptUSta?usp=sharing"
+    },
+    {
+      "title": "Calling Card",
+      "type": "Brand collateral",
+      "image": "/images/JACKIE.jpg",
+      "url": "https://drive.google.com/drive/folders/1Q6a6ksADDxyrKu3Z0H0XkHk3V83RKEsA?usp=sharing"
+    },
+    {
+      "title": "Posters",
+      "type": "Graphic design",
+      "image": "/images/poster.jpg",
+      "url": "https://drive.google.com/drive/folders/14T6Y7MgK2I8o2NA1f_3YUDlq4RtcRQgA?usp=sharing"
+    },
+    {
+      "title": "Mobile Design & Product Booth",
+      "type": "Campaign design",
+      "image": "/images/atlantis.jpg",
+      "url": "https://drive.google.com/drive/folders/1UFO6XRSO0H_y41P3apWEoNqNq-eruU94?usp=sharing"
+    },
+    {
+      "title": "Labels",
+      "type": "Packaging design",
+      "image": "/images/labels.jpg",
+      "url": "https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing"
+    },
+    {
+      "title": "Packaging Box Layout",
+      "type": "Packaging design",
+      "image": "/images/box.PNG",
+      "url": "https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing"
+    }
+  ],
+  "capabilityGroups": [
+    {
+      "title": "Development",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Laravel",
+        "Django",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "title": "Automation and AI",
+      "items": [
+        "Claude Code",
+        "Web scraping",
+        "Data workflows",
+        "Operational tools",
+        "API integration"
+      ]
+    },
+    {
+      "title": "Visual Production",
+      "items": [
+        "UI design",
+        "Photoshop",
+        "Illustrator",
+        "Premiere",
+        "Print layout",
+        "Brand assets"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "alamajacintg04@gmail.com",
+    "phone": "+63 951 110 6262",
+    "message": "Send a project brief, role opening, or system idea. I will reply with practical next steps."
+  }
+}
