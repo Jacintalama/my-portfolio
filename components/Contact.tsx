@@ -1,72 +1,74 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCopy } from '@fortawesome/free-solid-svg-icons'
+import portfolioData from "@/data/portfolio.json";
+import React, { useState } from "react";
 
 const Contact = () => {
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      alert(`Copied to clipboard: ${text}`)
-    }).catch(err => {
-      console.error('Failed to copy text: ', err);
-    });
-  }
+  const { contact } = portfolioData;
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const copyToClipboard = async (label: string, text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(label);
+      window.setTimeout(() => setCopied(null), 1800);
+    } catch {
+      setCopied("copy failed");
+      window.setTimeout(() => setCopied(null), 1800);
+    }
+  };
 
   return (
-    <div id='contact' className='relative pt-[5rem] pb-[6rem] bg-[#06080e] section-glow overflow-hidden'>
-      <div className='ambient-orb w-[300px] h-[300px] bg-[#a78bfa] opacity-[0.025] top-[20%] right-[-5%]' />
-
-      <div className='w-[80%] mx-auto relative'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-[4rem] items-center'>
+    <section id="contact" className="section-band">
+      <div className="page-shell">
+        <div className="ruled-panel grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
           <div>
-            <p data-aos='fade-right' data-aos-delay='200' className='heading__mini'>Get in Touch</p>
-            <h1 data-aos='fade-right' data-aos-delay='300' className='heading__primary'>
-              Let&apos;s <span className='gradient-text'>Connect</span>
-            </h1>
-            <p data-aos='fade-up' data-aos-delay='400' className='text-[15px] text-white/30 mt-[1rem] leading-[1.8] max-w-[420px]'>
-              Ready to collaborate or have a project in mind? I&apos;d love to hear from you.
-              Let&apos;s build something great together.
-            </p>
+            <p className="section-kicker">Contact</p>
+            <h2 className="section-title mt-3">Send the work my way.</h2>
+            <p className="body-copy mt-6">{contact.message}</p>
           </div>
-          <div className='space-y-4'>
-            <div
-              data-aos='fade-left'
-              data-aos-delay='500'
-              className='glass-card p-6 flex items-center justify-between group cursor-pointer'
-              onClick={() => copyToClipboard('+63 951 110 6262')}
+
+          <div className="grid content-center gap-4">
+            <button
+              type="button"
+              onClick={() => copyToClipboard("email", contact.email)}
+              className="group grid gap-2 border border-[color:var(--line-strong)] bg-[color:var(--paper)] p-5 text-left transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[color:var(--oxide-soft)]"
             >
-              <div>
-                <p className='text-[11px] text-[#818cf8]/50 font-medium uppercase tracking-[0.15em] mb-1.5'>Phone</p>
-                <p className='text-[20px] md:text-[24px] text-white/90 font-semibold font-heading'>
-                  +63 951 110 6262
-                </p>
-              </div>
-              <FontAwesomeIcon
-                icon={faCopy}
-                className='text-white/15 group-hover:text-[#818cf8]/60 transition-colors duration-300 text-lg'
-              />
-            </div>
-            <div
-              data-aos='fade-left'
-              data-aos-delay='600'
-              className='glass-card p-6 flex items-center justify-between group cursor-pointer'
-              onClick={() => copyToClipboard('alamajacintg04@gmail.com')}
+              <span className="text-[0.72rem] font-black uppercase tracking-[0.14em] text-[color:var(--oxide)]">
+                Email
+              </span>
+              <span className="break-all font-heading text-2xl font-black leading-tight">
+                {contact.email}
+              </span>
+              <span className="text-sm font-bold text-[color:var(--ink-muted)]">
+                {copied === "email" ? "Copied email" : "Click to copy"}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => copyToClipboard("phone", contact.phone)}
+              className="group grid gap-2 border border-[color:var(--line-strong)] bg-[color:var(--paper)] p-5 text-left transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[color:var(--oxide-soft)]"
             >
-              <div>
-                <p className='text-[11px] text-[#818cf8]/50 font-medium uppercase tracking-[0.15em] mb-1.5'>Email</p>
-                <p className='text-[16px] md:text-[20px] text-white/90 font-semibold'>
-                  alamajacintg04@gmail.com
-                </p>
-              </div>
-              <FontAwesomeIcon
-                icon={faCopy}
-                className='text-white/15 group-hover:text-[#818cf8]/60 transition-colors duration-300 text-lg'
-              />
-            </div>
+              <span className="text-[0.72rem] font-black uppercase tracking-[0.14em] text-[color:var(--oxide)]">
+                Phone
+              </span>
+              <span className="font-heading text-2xl font-black leading-tight">
+                {contact.phone}
+              </span>
+              <span className="text-sm font-bold text-[color:var(--ink-muted)]">
+                {copied === "phone" ? "Copied phone" : "Click to copy"}
+              </span>
+            </button>
+
+            {copied === "copy failed" ? (
+              <p className="text-sm font-bold text-[color:var(--oxide)]">
+                Copy failed. Select the contact text manually.
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Contact
+export default Contact;
