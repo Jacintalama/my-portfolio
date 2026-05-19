@@ -1,41 +1,64 @@
-import { XMarkIcon } from '@heroicons/react/16/solid'
-import React from 'react'
+import { XMarkIcon } from "@heroicons/react/16/solid";
+import React from "react";
 
 interface Props {
-  showNav: boolean
-  closeNav: () => void
+  showNav: boolean;
+  closeNav: () => void;
 }
+
+const links = [
+  { label: "Home", href: "#home" },
+  { label: "Work", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
 
 const NavMobile = ({ closeNav, showNav }: Props) => {
-  const navOpenStyle = showNav ? 'translate-x-0' : 'translate-x-[-100%]'
+  const navOpenStyle = showNav ? "translate-x-0" : "translate-x-[-100%]";
 
   return (
-    <div>
-      <div
-        className={`fixed top-0 ${navOpenStyle} transform transition-all duration-500 z-[10000] left-0 right-0 bg-black/60 backdrop-blur-sm w-[100vw] h-[100vh]`}
+    <div aria-hidden={!showNav}>
+      <button
+        type="button"
+        className={`fixed inset-0 z-[10000] bg-[color:var(--ink)]/30 transition-opacity duration-300 ${
+          showNav ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
         onClick={closeNav}
+        aria-label="Close navigation overlay"
       />
-      <ul className={`text-white ${navOpenStyle} fixed flex items-center flex-col h-[100%] justify-center transform transition-all duration-500 delay-200 w-[70%] sm:w-[60%]
-        bg-[#0b0e16]/95 backdrop-blur-2xl border-r border-white/[0.04]
-        space-y-10 z-[10006]`}>
-        {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item, i) => (
-          <li key={item} style={{ transitionDelay: `${200 + i * 60}ms` }}>
+      <nav
+        className={`${navOpenStyle} fixed left-0 top-0 z-[10006] flex h-full w-[82%] max-w-[360px] transform flex-col justify-between border-r-2 border-[color:var(--line-strong)] bg-[color:var(--paper)] p-7 transition-transform duration-300`}
+      >
+        <div className="flex items-center justify-between">
+          <span className="font-heading text-xl font-black">Jacint</span>
+          <button
+            type="button"
+            onClick={closeNav}
+            className="grid h-10 w-10 place-items-center border border-[color:var(--line-strong)] bg-transparent"
+            aria-label="Close navigation"
+          >
+            <XMarkIcon className="h-6 w-6" />
+          </button>
+        </div>
+        <div className="grid gap-6">
+          {links.map((link) => (
             <a
-              className='nav__link text-[22px] sm:text-[26px]'
-              href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
+              key={link.href}
+              href={link.href}
               onClick={closeNav}
+              className="border-t border-[color:var(--line)] pt-5 font-heading text-4xl font-black leading-none no-underline"
             >
-              {item}
+              {link.label}
             </a>
-          </li>
-        ))}
-        <XMarkIcon
-          onClick={closeNav}
-          className='absolute top-6 right-6 w-[2rem] h-[2rem] text-white/30 hover:text-[#818cf8] transition-colors duration-300 cursor-pointer'
-        />
-      </ul>
+          ))}
+        </div>
+        <p className="text-sm font-semibold leading-6 text-[color:var(--ink-muted)]">
+          Developer, visual maker, and AI-assisted workflow builder.
+        </p>
+      </nav>
     </div>
-  )
-}
+  );
+};
 
-export default NavMobile
+export default NavMobile;

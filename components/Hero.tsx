@@ -1,75 +1,79 @@
-import React from 'react'
-import TypeWriteEffect from './Helper/TypeWriteEffect'
-import Image from 'next/image'
-import Particle from './Particle'
+import portfolioData from "@/data/portfolio.json";
+import Image from "next/image";
+import React from "react";
 
 const Hero = () => {
-    return (
-        <div className='relative w-[100vw] pt-[4vh] md:pt-[12vh] h-[88vh] md:h-[100vh] custom-bg overflow-hidden'>
-            {/* Ambient orbs */}
-            <div className='ambient-orb w-[400px] h-[400px] bg-[#818cf8] opacity-[0.04] top-[10%] left-[-5%] z-[1]' />
-            <div className='ambient-orb w-[300px] h-[300px] bg-[#a78bfa] opacity-[0.03] bottom-[20%] right-[5%] z-[1]' style={{ animationDelay: '-4s' }} />
+  const { hero, stats } = portfolioData;
 
-            <div className='absolute inset-0 z-[2]'>
-                <Particle />
+  return (
+    <section id="home" className="relative min-h-screen pt-24 md:pt-28">
+      <div className="page-shell">
+        <div className="grid min-h-[calc(100vh-7rem)] items-center gap-10 py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+          <div>
+            <p className="section-kicker mb-5">{hero.eyebrow}</p>
+            <h1 className="display-title max-w-[820px]">{hero.primaryTitle}</h1>
+            <p className="body-copy mt-7 text-[1.05rem] md:text-[1.1rem]">
+              {hero.summary}
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={hero.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="print-button"
+              >
+                My Resume
+              </a>
+              <a href="#projects" className="print-button secondary">
+                View Selected Work
+              </a>
             </div>
-            <div className='relative z-[3] flex justify-center flex-col w-[80%] h-[100%] mx-auto'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
-                    <div>
-                        <div className='stagger-1'>
-                            <span className='badge mb-6'>
-                                <span className='badge-dot' />
-                                Available for work
-                            </span>
-                        </div>
-                        <div className='stagger-2'>
-                            <p className='text-[13px] md:text-[14px] text-white/30 font-medium tracking-[0.2em] uppercase mb-3'>
-                                Portfolio
-                            </p>
-                            <h1 className='font-heading xl:text-[60px] lg:text-[48px] sm:text-[40px] text-[32px] font-bold leading-[1.05] text-white'>
-                                Hi, I&apos;m <span className='gradient-text'>Jacint</span>
-                            </h1>
-                        </div>
-                        <div className='stagger-3 mt-1'>
-                            <TypeWriteEffect />
-                        </div>
-                        <div className='stagger-4'>
-                            <p className='mt-[1.5rem] text-[15px] md:text-[16px] text-white/40 leading-[1.7] max-w-[500px]'>
-                                Full stack developer building professional digital systems and web applications.
-                                I leverage Claude Code and modern tools to create efficient, scalable
-                                solutions that make businesses stand out.
-                            </p>
-                        </div>
-                        <div className='stagger-5 mt-[2rem] flex items-center space-x-4'>
-                            <button
-                                className='btn-primary'
-                                onClick={() => { window.location.href = 'https://drive.google.com/file/d/1eXj_LQnXSE_IeFG04zPGH4W2XimlXUxW/view?usp=sharing'; }}
-                            >
-                                My Resume
-                            </button>
-                            <a href='#projects' className='btn-outline'>
-                                View Projects
-                            </a>
-                        </div>
-                    </div>
-                    <div className='hidden md:flex justify-center stagger-6'>
-                        <div className='relative hero-float'>
-                            <div className='absolute -inset-8 rounded-full bg-[#818cf8] opacity-[0.06] blur-3xl animate-pulse' />
-                            <div className='absolute -inset-4 rounded-full border border-[#818cf8]/10' />
-                            <Image
-                                src='/images/hero.png'
-                                alt='hero'
-                                width={400}
-                                height={400}
-                                className='object-cover rounded-full relative z-10 border border-white/[0.06]'
-                                quality={100}
-                            />
-                        </div>
-                    </div>
+
+            <div className="mt-10 grid border-y border-[color:var(--line-strong)] sm:grid-cols-4">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="border-b border-[color:var(--line)] py-4 sm:border-b-0 sm:border-r sm:px-4 sm:last:border-r-0"
+                >
+                  <strong className="font-heading text-[2.1rem] leading-none text-[color:var(--oxide)]">
+                    {stat.value}
+                  </strong>
+                  <span className="mt-2 block text-[0.76rem] font-extrabold uppercase leading-snug tracking-[0.08em] text-[color:var(--ink-muted)]">
+                    {stat.label}
+                  </span>
                 </div>
+              ))}
             </div>
-        </div>
-    );
-}
+          </div>
 
-export default Hero
+          <div className="relative">
+            <div className="ruled-panel relative overflow-hidden p-3 shadow-[12px_12px_0_var(--oxide-soft)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] bg-[color:var(--paper-soft)]">
+                <Image
+                  src={hero.portrait}
+                  alt="Portrait of Jacint Alama"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 90vw, 460px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="grid grid-cols-[auto_1fr] gap-4 border-t border-[color:var(--line-strong)] pt-4">
+                <span className="font-heading text-4xl font-black text-[color:var(--oxide)]">
+                  J
+                </span>
+                <p className="text-sm font-semibold leading-relaxed text-[color:var(--ink-muted)]">
+                  Practical web systems, visual production, and AI-assisted
+                  workflows for business projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

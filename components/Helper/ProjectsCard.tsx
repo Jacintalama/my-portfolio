@@ -1,50 +1,57 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 interface Props {
   title: string;
-  num: string;
-  link: string;
-  imageSrc: string;
-  description: string;
+  category: string;
+  url: string;
+  image: string;
+  summary: string;
+  index: number;
 }
 
-const ProjectsCard = ({ num, title, link, imageSrc, description }: Props) => {
+const ProjectsCard = ({ title, category, url, image, summary, index }: Props) => {
+  const number = String(index + 1).padStart(2, "0");
+
   return (
-    <div className='project-card group h-full flex flex-col'>
-      <div className='relative overflow-hidden'>
-        <Image
-          src={imageSrc}
-          alt={title}
-          width={600}
-          height={400}
-          className='w-full h-52 object-cover project-image'
-        />
-        <div className='absolute inset-0 bg-gradient-to-t from-[#06080e] via-[#06080e]/20 to-transparent' />
-        <span className='absolute top-4 right-4 text-[12px] font-mono font-semibold text-white bg-[#818cf8]/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10'>
-          {num}
-        </span>
-      </div>
-      <div className='p-6 flex-1 flex flex-col'>
-        <h3 className='text-[18px] text-white/90 font-semibold mb-2 group-hover:text-[#a5b4fc] transition-colors duration-400'>
-          {title}
-        </h3>
-        <p className='text-white/30 text-[13px] leading-[1.7] mb-5 flex-1 line-clamp-3'>
-          {description}
-        </p>
-        <a
-          href={link}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='btn-outline inline-flex items-center gap-2 !px-5 !py-2.5 text-[12px] w-fit'
-        >
-          View Live
-          <svg className='w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
-          </svg>
-        </a>
-      </div>
-    </div>
+    <article className="ruled-panel group overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-1">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Open ${title}`}
+        className="grid h-full text-inherit no-underline"
+      >
+        <div className="relative aspect-[16/10] overflow-hidden border-b border-[color:var(--line-strong)] bg-[color:var(--paper-soft)]">
+          <Image
+            src={image}
+            alt={`${title} project preview`}
+            fill
+            sizes="(max-width: 768px) 92vw, (max-width: 1180px) 45vw, 360px"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+          />
+          <span className="absolute left-3 top-3 rounded-[3px] border border-[color:var(--line-strong)] bg-[color:var(--paper)] px-2 py-1 font-heading text-sm font-black text-[color:var(--oxide)]">
+            {number}
+          </span>
+        </div>
+        <div className="grid gap-4 p-5">
+          <div>
+            <p className="mb-2 text-[0.72rem] font-black uppercase tracking-[0.12em] text-[color:var(--oxide)]">
+              {category}
+            </p>
+            <h3 className="font-heading text-2xl font-black leading-none tracking-0 text-[color:var(--ink)]">
+              {title}
+            </h3>
+          </div>
+          <p className="text-sm leading-7 text-[color:var(--ink-muted)]">
+            {summary}
+          </p>
+          <span className="mt-auto inline-flex text-sm font-black text-[color:var(--blueprint)]">
+            View project
+          </span>
+        </div>
+      </a>
+    </article>
   );
 };
 

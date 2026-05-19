@@ -1,51 +1,48 @@
-import React from 'react'
-import SkillCard from './Helper/SkillCard'
+import portfolioData from "@/data/portfolio.json";
+import React from "react";
 
 const Skills = () => {
-    return (
-        <div id='skills' className='relative pt-[5rem] pb-[6rem] bg-[#0b0e16] section-glow overflow-hidden'>
-            <div className='ambient-orb w-[350px] h-[350px] bg-[#818cf8] opacity-[0.025] bottom-[10%] left-[-5%]' />
+  const { capabilityGroups } = portfolioData;
 
-            <div className='grid w-[80%] mx-auto grid-cols-1 lg:grid-cols-7 gap-[3rem] items-center relative'>
-                <div className='col-span-3'>
-                    <p className='heading__mini'>My Skills</p>
-                    <h1 className='heading__primary'>
-                        Technical <span className='gradient-text'>Skills</span><br />& Expertise
-                    </h1>
-                    <p className='text-[15px] mb-[1.5rem] text-white/30 mt-[1.5rem] leading-[1.8]'>
-                        From building dynamic web applications with React and Next.js to crafting
-                        visual experiences with design tools — bridging development and
-                        design with AI-powered tools.
-                    </p>
-                </div>
-                <div className='col-span-4'>
-                    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-[0.6rem]'>
-                        {[
-                            { title: 'React', image: '/images/react.svg', percent: '90%', delay: 100 },
-                            { title: 'Tailwind', image: '/images/tailwind-svgrepo-com.svg', percent: '87%', delay: 140 },
-                            { title: 'JavaScript', image: '/images/js.svg', percent: '90%', delay: 180 },
-                            { title: 'TypeScript', image: '/images/ts.svg', percent: '87%', delay: 220 },
-                            { title: 'Next.js', image: '/images/nextjs-icon-svgrepo-com.svg', percent: '70%', delay: 260 },
-                            { title: 'PostgreSQL', image: '/images/postgresql-icon.svg', percent: '70%', delay: 300 },
-                            { title: 'Django', image: '/images/django-svgrepo-com.svg', percent: '55%', delay: 340 },
-                            { title: 'Python', image: '/images/python-svgrepo-com.svg', percent: '55%', delay: 380 },
-                            { title: 'HTML', image: '/images/html.svg', percent: '67%', delay: 420 },
-                            { title: 'PHP', image: '/images/php.svg', percent: '70%', delay: 460 },
-                            { title: 'Laravel', image: '/images/laravel.svg', percent: '70%', delay: 500 },
-                            { title: 'Illustrator', image: '/images/ai.svg', percent: '80%', delay: 540 },
-                            { title: 'Premiere', image: '/images/pr.svg', percent: '90%', delay: 580 },
-                            { title: 'Photoshop', image: '/images/ps.svg', percent: '90%', delay: 620 },
-                            { title: 'Claude Code', image: '/images/claude-ai-icon.svg', percent: '90%', delay: 660 },
-                        ].map((skill) => (
-                            <div key={skill.title} data-aos='flip-left' data-aos-delay={skill.delay}>
-                                <SkillCard title={skill.title} image={skill.image} percent={skill.percent} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+  return (
+    <section id="skills" className="section-band">
+      <div className="page-shell">
+        <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <div>
+            <p className="section-kicker">Capabilities</p>
+            <h2 className="section-title mt-3">Built across code and visual production.</h2>
+            <p className="body-copy mt-6">
+              No percentage bars. The useful signal is the type of work I can
+              take from unclear request to shipped output.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {capabilityGroups.map((group, index) => (
+              <section key={group.title} className="ruled-panel p-5">
+                <p className="mb-5 font-heading text-4xl font-black leading-none text-[color:var(--oxide)]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="font-heading text-2xl font-black leading-none">
+                  {group.title}
+                </h3>
+                <ul className="mt-5 space-y-3">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="border-t border-[color:var(--line)] pt-3 text-sm font-bold text-[color:var(--ink-muted)]"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
         </div>
-    )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Skills
+export default Skills;

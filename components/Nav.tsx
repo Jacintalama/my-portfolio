@@ -1,46 +1,64 @@
-import { Bars3CenterLeftIcon } from '@heroicons/react/16/solid'
-import React, { useEffect, useState } from 'react'
+import { Bars3CenterLeftIcon } from "@heroicons/react/16/solid";
+import React, { useEffect, useState } from "react";
 
 interface Props {
-    openNav: () => void
+  openNav: () => void;
 }
+
+const links = [
+  { label: "Home", href: "#home" },
+  { label: "Work", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Nav = ({ openNav }: Props) => {
-    const [navSticky, setNavSticky] = useState(false);
+  const [navSticky, setNavSticky] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setNavSticky(window.scrollY >= 90);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setNavSticky(window.scrollY >= 60);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const stickyStyle = navSticky
-        ? 'bg-[#06080e]/70 backdrop-blur-2xl border-b border-white/[0.03] shadow-lg shadow-black/30'
-        : '';
+  return (
+    <header
+      className={`fixed left-0 top-0 z-[1000] w-full border-b border-[color:var(--line)] transition-colors duration-300 ${
+        navSticky ? "bg-[color:var(--paper)]/95 backdrop-blur-md" : "bg-[color:var(--paper)]/80"
+      }`}
+    >
+      <div className="page-shell flex h-20 items-center justify-between">
+        <a
+          href="#home"
+          className="font-heading text-xl font-black tracking-0 text-[color:var(--ink)] no-underline"
+        >
+          Jacint Alama
+        </a>
+        <nav className="hidden items-center gap-7 md:flex">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-extrabold text-[color:var(--ink-muted)] no-underline transition-colors duration-200 hover:text-[color:var(--oxide)]"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <button
+          type="button"
+          onClick={openNav}
+          className="grid h-11 w-11 place-items-center border border-[color:var(--line-strong)] bg-transparent text-[color:var(--ink)] md:hidden"
+          aria-label="Open navigation"
+        >
+          <Bars3CenterLeftIcon className="h-6 w-6 rotate-180" />
+        </button>
+      </div>
+    </header>
+  );
+};
 
-    return (
-        <div className={`fixed w-[100%] ${stickyStyle} transition-all duration-700 z-[1000]`}>
-            <div className='flex items-center h-[10vh] justify-between w-[80%] mx-auto'>
-                <div className='font-logo text-white text-[18px]'>
-                    <span className='text-[28px] md:text-[36px] gradient-text'>Jacint</span>
-                    <span className='text-white/30 ml-1 text-[15px]'>Portfolio</span>
-                </div>
-                <ul className='md:flex hidden items-center space-x-10'>
-                    <li><a className='nav__link' href='#'>Home</a></li>
-                    <li><a className='nav__link' href='#about'>About</a></li>
-                    <li><a className='nav__link' href='#projects'>Projects</a></li>
-                    <li><a className='nav__link' href='#skills'>Skills</a></li>
-                    <li><a className='nav__link' href='#contact'>Contact</a></li>
-                </ul>
-                <Bars3CenterLeftIcon
-                    onClick={openNav}
-                    className='w-[2rem] md:hidden h-[2rem] text-white/40 rotate-180 hover:text-[#818cf8] transition-colors duration-300 cursor-pointer'
-                />
-            </div>
-        </div>
-    )
-}
-
-export default Nav
+export default Nav;
