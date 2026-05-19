@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
      fontFamily:{
-      logo:["Oleo Script", "system-ui"],
-      primary: ["Outfit", "sans-serif"],
-      heading: ["DM Serif Display", "serif"],
+      logo:["Archivo", "system-ui"],
+      primary: ["Libre Franklin", "system-ui", "sans-serif"],
+      heading: ["Archivo", "system-ui", "sans-serif"],
      }
     },
   },
