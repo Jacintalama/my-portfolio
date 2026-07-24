@@ -11,7 +11,8 @@ type CaseStudy = {
   status: string;
   summary: string;
   highlight?: string;
-  metrics: Metric[];
+  url?: string;
+  metrics?: Metric[];
   tags: string[];
   images: CaseImage[];
 };
@@ -23,7 +24,7 @@ const Shot = ({ img }: { img: CaseImage }) => (
       alt={img.alt}
       width={img.width ?? 1600}
       height={img.height ?? 1000}
-      sizes="(max-width: 1024px) 92vw, 560px"
+      sizes="(max-width: 1024px) 92vw, 720px"
       className="h-auto w-full"
     />
   </figure>
@@ -47,6 +48,7 @@ const Metrics = ({ metrics }: { metrics: Metric[] }) => (
 );
 
 const CaseStudyItem = ({ cs }: { cs: CaseStudy }) => {
+  const hasMetrics = Array.isArray(cs.metrics) && cs.metrics.length > 0;
   const flagship = cs.images.length >= 2;
 
   return (
@@ -63,6 +65,18 @@ const CaseStudyItem = ({ cs }: { cs: CaseStudy }) => {
             <p className="mt-4 max-w-[54ch] text-[0.99rem] leading-7 text-[color:var(--ink-muted)]">
               {cs.summary}
             </p>
+            {cs.url ? (
+              <a
+                href={cs.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${cs.title} (opens in a new tab)`}
+                className="print-button mt-6 w-fit gap-1.5 px-4 py-2.5 text-[0.8rem]"
+              >
+                Visit live site
+                <span aria-hidden="true">&#8599;</span>
+              </a>
+            ) : null}
           </div>
           <div className="md:flex md:justify-end">
             <span className="status-badge">{cs.status}</span>
@@ -74,14 +88,16 @@ const CaseStudyItem = ({ cs }: { cs: CaseStudy }) => {
             <Shot img={cs.images[0]} />
             <div className="grid content-start gap-5">
               <Shot img={cs.images[1]} />
-              <Metrics metrics={cs.metrics} />
+              {hasMetrics ? <Metrics metrics={cs.metrics as Metric[]} /> : null}
             </div>
           </div>
-        ) : (
+        ) : hasMetrics ? (
           <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
             <Shot img={cs.images[0]} />
-            <Metrics metrics={cs.metrics} />
+            <Metrics metrics={cs.metrics as Metric[]} />
           </div>
+        ) : (
+          <Shot img={cs.images[0]} />
         )}
 
         <div className="flex flex-wrap gap-2">
@@ -117,9 +133,9 @@ const CaseStudies = () => {
           <p className="section-kicker">Featured case studies</p>
           <h2 className="section-title">Systems built to be correct, then kept that way.</h2>
           <p className="body-copy">
-            Two production platforms where correctness was the whole job: a multi-store
-            profit engine consolidating real money, and the safety layer that guards an
-            AI-mediated underwriting pipeline.
+            Production platforms I built and kept reliable: a multi-store profit engine
+            consolidating real money, a safety layer guarding an AI-mediated underwriting
+            pipeline, and a from-scratch Swiss commerce marketplace.
           </p>
         </div>
 

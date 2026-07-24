@@ -79,16 +79,29 @@
       "images": [
         { "src": "/images/Underwriting-Engine-system-image.png", "alt": "Underwriting Engine QA matrix output showing routing, validation state, and safety-rule assertions", "width": 1882, "height": 991 }
       ]
+    },
+    {
+      "title": "Waffenplatz",
+      "category": "From-scratch e-commerce marketplace",
+      "status": "Live · public site",
+      "url": "https://waffenplatz.ch/",
+      "summary": "A Swiss weapons marketplace built from scratch: dealer discovery, storefront flow, and production-facing UI on a Shopware (PHP) backend, with a custom Payrexx payment integration for Swiss checkout.",
+      "highlight": "Built end to end: a Shopware (PHP) commerce backend plus a custom Payrexx payment-gateway integration wired straight into the checkout flow.",
+      "tags": [
+        "Shopware",
+        "PHP",
+        "Payrexx (custom checkout)",
+        "From-scratch build",
+        "Storefront UI",
+        "Dealer discovery",
+        "Swiss marketplace"
+      ],
+      "images": [
+        { "src": "/images/waffenplatz.png", "alt": "Waffenplatz Swiss weapons marketplace storefront built on Shopware", "width": 1902, "height": 892 }
+      ]
     }
   ],
   "selectedWork": [
-    {
-      "title": "Waffenplatz",
-      "category": "Marketplace platform",
-      "image": "/images/waffenplatz.png",
-      "url": "https://waffenplatz.ch/",
-      "summary": "Swiss weapons marketplace experience with dealer discovery, storefront flow, and production-facing UI work."
-    },
     {
       "title": "RAVEN WEAPON",
       "category": "E-commerce storefront",
