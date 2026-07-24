@@ -5,41 +5,50 @@
 @tailwind utilities;
 
 :root {
-  --paper: oklch(96% 0.012 82);
-  --paper-soft: oklch(92% 0.018 88);
-  --paper-strong: oklch(98% 0.008 82);
-  --ink: oklch(18% 0.035 250);
-  --ink-muted: oklch(38% 0.035 250);
-  --ink-faint: oklch(56% 0.028 250);
-  --oxide: oklch(57% 0.16 36);
-  --oxide-soft: oklch(86% 0.07 44);
-  --sage: oklch(64% 0.09 145);
-  --blueprint: oklch(41% 0.11 250);
-  --line: oklch(24% 0.035 250 / 0.22);
-  --line-strong: oklch(19% 0.035 250);
-  --shadow: oklch(14% 0.03 250 / 0.16);
+  --paper: oklch(96.5% 0.009 88);
+  --paper-soft: oklch(93% 0.014 90);
+  --paper-strong: oklch(98.5% 0.006 88);
+  --ink: oklch(20% 0.028 255);
+  --ink-muted: oklch(37% 0.03 255);
+  --ink-faint: oklch(50% 0.028 255);
+  --oxide: oklch(53% 0.16 34);
+  --oxide-strong: oklch(46% 0.17 33);
+  --oxide-soft: oklch(87% 0.06 46);
+  --sage: oklch(58% 0.09 150);
+  --blueprint: oklch(40% 0.12 250);
+  --line: oklch(24% 0.035 255 / 0.2);
+  --line-strong: oklch(20% 0.03 255);
+  --shadow: oklch(14% 0.03 255 / 0.16);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* semantic z-index scale */
+  --z-sticky: 100;
+  --z-overlay: 1000;
+  --z-drawer: 1100;
 }
 
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 html {
   background: var(--paper);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
   background:
-    linear-gradient(90deg, oklch(18% 0.035 250 / 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, oklch(18% 0.035 250 / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(20% 0.03 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, oklch(20% 0.03 255 / 0.03) 1px, transparent 1px),
     var(--paper);
-  background-size: 36px 36px;
+  background-size: 40px 40px;
   color: var(--ink);
   font-family: 'Libre Franklin', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,6 +60,12 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--oxide);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 ::selection {
@@ -79,55 +94,74 @@ a {
   }
 
   .section-band {
-    padding-block: 4rem;
+    padding-block: clamp(3.5rem, 8vw, 7rem);
     border-top: 1px solid var(--line);
   }
 
+  .section-head {
+    display: grid;
+    gap: 1.25rem;
+  }
+
   .section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--oxide);
-    font-size: 0.76rem;
-    font-weight: 900;
-    letter-spacing: 0.14em;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
+  }
+
+  .section-kicker::before {
+    content: "";
+    width: 1.6rem;
+    height: 2px;
+    background: var(--oxide);
   }
 
   .display-title {
     font-family: 'Archivo', system-ui, sans-serif;
-    font-size: 2rem;
+    font-size: clamp(3.1rem, 11vw, 6.4rem);
     font-weight: 900;
-    line-height: 1;
-    letter-spacing: 0;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
     overflow-wrap: break-word;
+    text-wrap: balance;
   }
 
   .section-title {
     font-family: 'Archivo', system-ui, sans-serif;
-    font-size: 2.35rem;
+    font-size: clamp(2.1rem, 5.2vw, 4rem);
     font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: 0;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
   }
 
   .body-copy {
-    max-width: 68ch;
+    max-width: 66ch;
     color: var(--ink-muted);
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.72;
+    text-wrap: pretty;
   }
 
   .print-button {
     display: inline-flex;
-    min-height: 44px;
+    min-height: 46px;
     align-items: center;
     justify-content: center;
     gap: 0.55rem;
     border: 1.5px solid var(--line-strong);
     border-radius: 4px;
-    padding: 0.78rem 1rem;
+    padding: 0.8rem 1.15rem;
     background: var(--ink);
     color: var(--paper);
     font-size: 0.82rem;
-    font-weight: 900;
+    font-weight: 800;
+    letter-spacing: 0.01em;
     line-height: 1;
     text-decoration: none;
     transition:
@@ -139,7 +173,7 @@ a {
 
   .print-button:hover {
     transform: translateY(-2px);
-    box-shadow: 6px 6px 0 var(--oxide-soft);
+    box-shadow: 5px 5px 0 var(--oxide-soft);
   }
 
   .print-button.secondary {
@@ -153,8 +187,64 @@ a {
 
   .ruled-panel {
     border: 1.5px solid var(--line-strong);
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--paper-strong);
+  }
+
+  /* --- Small components --- */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem 0.3rem 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  .status-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--sage);
+    box-shadow: 0 0 0 3px oklch(58% 0.09 150 / 0.18);
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.3rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--ink-muted);
+    background: var(--paper);
+  }
+
+  .metric-value {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: clamp(1.7rem, 3.2vw, 2.35rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--oxide);
+  }
+
+  .metric-label {
+    margin-top: 0.4rem;
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
   }
 
   .archive-link {
@@ -163,7 +253,7 @@ a {
     align-items: center;
     gap: 1rem;
     border-top: 1px solid var(--line);
-    padding: 0.9rem 0;
+    padding: 0.95rem 0;
     color: var(--ink);
     text-decoration: none;
     transition: color 220ms var(--ease-out), padding-left 220ms var(--ease-out);
@@ -173,33 +263,71 @@ a {
     color: var(--oxide);
     padding-left: 0.4rem;
   }
-}
 
-@media (min-width: 768px) {
-  .section-band {
-    padding-block: 5.75rem;
-  }
-
-  .display-title {
-    font-size: 5.1rem;
-    line-height: 0.9;
-  }
-
-  .section-title {
-    font-size: 3.55rem;
+  .site-footer {
+    border-top: 1.5px solid var(--line-strong);
+    background: var(--paper-soft);
   }
 }
 
-@media (min-width: 1120px) {
-  .section-band {
-    padding-block: 7rem;
+/* --- Motion: hero load-in --- */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    opacity: 0;
+    animation: riseIn 0.85s var(--ease-out) both;
+  }
+}
+
+/* --- Motion: scroll reveals (progressive enhancement) ---
+   Default state is fully visible. Hidden state only applies when JS is present
+   (`.js` on <html>) AND the user has not requested reduced motion. This keeps
+   content visible for no-JS, crawlers, and reduced-motion users. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
   }
 
-  .display-title {
-    font-size: 6.4rem;
+  html.js .reveal.is-in {
+    opacity: 1;
+    transform: none;
   }
 
-  .section-title {
-    font-size: 4.25rem;
+  html.js .reveal-group .reveal-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 75ms);
+  }
+
+  html.js .reveal-group.is-in .reveal-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }

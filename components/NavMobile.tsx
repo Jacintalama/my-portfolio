@@ -8,7 +8,7 @@ interface Props {
 
 const links = [
   { label: "Home", href: "#home" },
-  { label: "Work", href: "#projects" },
+  { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -21,14 +21,14 @@ const NavMobile = ({ closeNav, showNav }: Props) => {
     <div aria-hidden={!showNav}>
       <button
         type="button"
-        className={`fixed inset-0 z-[10000] bg-[color:var(--ink)]/30 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[var(--z-drawer)] bg-[color:var(--ink)]/30 transition-opacity duration-300 ${
           showNav ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={closeNav}
         aria-label="Close navigation overlay"
       />
       <nav
-        className={`${navOpenStyle} fixed left-0 top-0 z-[10006] flex h-full w-[82%] max-w-[360px] transform flex-col justify-between border-r-2 border-[color:var(--line-strong)] bg-[color:var(--paper)] p-7 transition-transform duration-300`}
+        className={`${navOpenStyle} fixed left-0 top-0 z-[calc(var(--z-drawer)+1)] flex h-full w-[82%] max-w-[360px] transform flex-col justify-between border-r-2 border-[color:var(--line-strong)] bg-[color:var(--paper)] p-7 transition-transform duration-300`}
       >
         <div className="flex items-center justify-between">
           <span className="font-heading text-xl font-black">Jacint</span>

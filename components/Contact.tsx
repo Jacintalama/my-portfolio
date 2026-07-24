@@ -5,63 +5,74 @@ const Contact = () => {
   const { contact } = portfolioData;
   const [copied, setCopied] = useState<string | null>(null);
 
-  const copyToClipboard = async (label: string, text: string) => {
+  const copyToClipboard = async (key: string, text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      setCopied(label);
-      window.setTimeout(() => setCopied(null), 1800);
+      setCopied(key);
     } catch {
-      setCopied("copy failed");
-      window.setTimeout(() => setCopied(null), 1800);
+      setCopied("failed");
     }
+    window.setTimeout(() => setCopied(null), 1800);
   };
+
+  const channels = [
+    {
+      key: "email",
+      label: "Email",
+      value: contact.email,
+      href: `mailto:${contact.email}`,
+      openLabel: "Email me",
+    },
+    {
+      key: "phone",
+      label: "Phone",
+      value: contact.phone,
+      href: `tel:${contact.phone.replace(/\s+/g, "")}`,
+      openLabel: "Call",
+    },
+  ];
 
   return (
     <section id="contact" className="section-band">
       <div className="page-shell">
         <div className="ruled-panel grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
-          <div>
+          <div className="section-head">
             <p className="section-kicker">Contact</p>
-            <h2 className="section-title mt-3">Send the work my way.</h2>
-            <p className="body-copy mt-6">{contact.message}</p>
+            <h2 className="section-title">Send the work my way.</h2>
+            <p className="body-copy">{contact.message}</p>
           </div>
 
           <div className="grid content-center gap-4">
-            <button
-              type="button"
-              onClick={() => copyToClipboard("email", contact.email)}
-              className="group grid gap-2 border border-[color:var(--line-strong)] bg-[color:var(--paper)] p-5 text-left transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[color:var(--oxide-soft)]"
-            >
-              <span className="text-[0.72rem] font-black uppercase tracking-[0.14em] text-[color:var(--oxide)]">
-                Email
-              </span>
-              <span className="break-all font-heading text-2xl font-black leading-tight">
-                {contact.email}
-              </span>
-              <span className="text-sm font-bold text-[color:var(--ink-muted)]">
-                {copied === "email" ? "Copied email" : "Click to copy"}
-              </span>
-            </button>
+            {channels.map((channel) => (
+              <div
+                key={channel.key}
+                className="grid gap-3 border border-[color:var(--line-strong)] bg-[color:var(--paper)] p-5"
+              >
+                <span className="text-[0.72rem] font-black uppercase tracking-[0.14em] text-[color:var(--oxide)]">
+                  {channel.label}
+                </span>
+                <span className="break-all font-heading text-xl font-black leading-tight sm:text-2xl">
+                  {channel.value}
+                </span>
+                <div className="mt-1 flex flex-wrap gap-2.5">
+                  <a href={channel.href} className="print-button px-4 py-2.5 text-[0.78rem]">
+                    {channel.openLabel}
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(channel.key, channel.value)}
+                    className="print-button secondary px-4 py-2.5 text-[0.78rem]"
+                    aria-live="polite"
+                  >
+                    {copied === channel.key ? "Copied ✓" : "Copy"}
+                  </button>
+                </div>
+              </div>
+            ))}
 
-            <button
-              type="button"
-              onClick={() => copyToClipboard("phone", contact.phone)}
-              className="group grid gap-2 border border-[color:var(--line-strong)] bg-[color:var(--paper)] p-5 text-left transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[color:var(--oxide-soft)]"
-            >
-              <span className="text-[0.72rem] font-black uppercase tracking-[0.14em] text-[color:var(--oxide)]">
-                Phone
-              </span>
-              <span className="font-heading text-2xl font-black leading-tight">
-                {contact.phone}
-              </span>
-              <span className="text-sm font-bold text-[color:var(--ink-muted)]">
-                {copied === "phone" ? "Copied phone" : "Click to copy"}
-              </span>
-            </button>
-
-            {copied === "copy failed" ? (
+            {copied === "failed" ? (
               <p className="text-sm font-bold text-[color:var(--oxide)]">
-                Copy failed. Select the contact text manually.
+                Copy failed &mdash; select the text manually.
               </p>
             ) : null}
           </div>

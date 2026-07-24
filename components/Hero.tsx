@@ -6,44 +6,66 @@ const Hero = () => {
   const { hero, stats } = portfolioData;
 
   return (
-    <section id="home" className="relative min-h-screen pt-24 md:pt-28">
+    <section id="home" className="relative pt-24 md:pt-28">
       <div className="page-shell">
-        <div className="grid min-h-[calc(100vh-7rem)] items-center gap-10 py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid min-h-[calc(100vh-8rem)] items-center gap-10 py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div className="min-w-0">
-            <p className="section-kicker mb-5">{hero.eyebrow}</p>
-            <h1 className="display-title max-w-[820px]" aria-label={hero.primaryTitle}>
+            <p className="section-kicker hero-rise mb-6" style={{ animationDelay: "40ms" }}>
+              {hero.eyebrow}
+            </p>
+
+            <h1
+              className="display-title hero-rise max-w-[820px]"
+              style={{ animationDelay: "120ms" }}
+              aria-label={hero.primaryTitle}
+            >
               <span className="block">Developer</span>
               <span className="block">and visual</span>
-              <span className="block">maker.</span>
+              <span className="block">
+                maker<span className="text-[color:var(--oxide)]">.</span>
+              </span>
             </h1>
-            <p className="body-copy mt-7 break-words text-[1.05rem] md:text-[1.1rem]">
+
+            <p
+              className="body-copy hero-rise mt-7 text-[1.05rem] md:text-[1.12rem]"
+              style={{ animationDelay: "240ms" }}
+            >
               {hero.summary}
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div
+              className="hero-rise mt-8 flex flex-col gap-3 sm:flex-row"
+              style={{ animationDelay: "340ms" }}
+            >
+              <a
+                href="#work"
+                className="print-button w-full sm:w-auto"
+              >
+                View Case Studies
+              </a>
               <a
                 href={hero.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="print-button w-full sm:w-auto"
+                className="print-button secondary w-full sm:w-auto"
               >
                 My Resume
               </a>
-              <a href="#projects" className="print-button secondary w-full sm:w-auto">
-                View Selected Work
-              </a>
             </div>
 
-            <div className="mt-10 grid border-y border-[color:var(--line-strong)] sm:grid-cols-4">
+            <div
+              className="hero-rise mt-11 grid border-y border-[color:var(--line-strong)] sm:grid-cols-4"
+              style={{ animationDelay: "440ms" }}
+            >
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="border-b border-[color:var(--line)] py-4 sm:border-b-0 sm:border-r sm:px-4 sm:last:border-r-0"
+                  className="border-b border-[color:var(--line)] py-4 sm:border-b-0 sm:border-r sm:px-4 sm:last:border-r-0 sm:first:pl-0"
                 >
-                  <strong className="font-heading text-[2.1rem] leading-none text-[color:var(--oxide)]">
+                  <strong className="font-heading text-[2.1rem] font-black leading-none text-[color:var(--oxide)]">
                     {stat.value}
                   </strong>
-                  <span className="mt-2 block text-[0.76rem] font-extrabold uppercase leading-snug tracking-[0.08em] text-[color:var(--ink-muted)]">
+                  <span className="mt-2 block text-[0.74rem] font-extrabold uppercase leading-snug tracking-[0.06em] text-[color:var(--ink-muted)]">
                     {stat.label}
                   </span>
                 </div>
@@ -51,24 +73,28 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative min-w-0">
-            <div className="ruled-panel relative overflow-hidden p-3 shadow-[12px_12px_0_var(--oxide-soft)]">
+          <div
+            className="hero-rise relative min-w-0"
+            style={{ animationDelay: "200ms" }}
+          >
+            <div className="ruled-panel relative overflow-hidden p-3 shadow-[10px_10px_0_var(--oxide-soft)]">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] bg-[color:var(--paper-soft)]">
                 <Image
                   src={hero.portrait}
                   alt="Portrait of Jacint Alama"
                   fill
+                  priority
                   sizes="(max-width: 1024px) 90vw, 460px"
                   className="object-cover"
                 />
               </div>
-              <div className="grid grid-cols-[auto_1fr] gap-4 border-t border-[color:var(--line-strong)] pt-4">
-                <span className="font-heading text-4xl font-black text-[color:var(--oxide)]">
-                  J
+              <div className="mt-3 grid grid-cols-[auto_1fr] items-center gap-4 border-t border-[color:var(--line-strong)] pt-4">
+                <span className="font-heading text-4xl font-black leading-none text-[color:var(--oxide)]">
+                  JA
                 </span>
                 <p className="text-sm font-semibold leading-relaxed text-[color:var(--ink-muted)]">
-                  Practical web systems, visual production, and AI-assisted
-                  workflows for business projects.
+                  Practical web systems, tested end to end, plus the visual work to
+                  match.
                 </p>
               </div>
             </div>

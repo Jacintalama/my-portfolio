@@ -1,9 +1,9 @@
 {
   "hero": {
     "name": "Jacint Alama",
-    "eyebrow": "Full stack developer + visual maker",
+    "eyebrow": "Full-stack developer + visual maker",
     "primaryTitle": "Developer and visual maker.",
-    "summary": "I build practical web systems, automation workflows, and visual assets for businesses that need work shipped clearly and quickly.",
+    "summary": "I build production web systems — full-stack platforms, analytics tools, and the automated tests that keep them reliable. I also handle the visual side, from UI to brand and print assets.",
     "portrait": "/images/hero.png",
     "resumeUrl": "https://drive.google.com/file/d/1eXj_LQnXSE_IeFG04zPGH4W2XimlXUxW/view?usp=sharing"
   },
@@ -13,16 +13,73 @@
       "label": "Years full stack development"
     },
     {
-      "value": "15",
-      "label": "Projects delivered"
+      "value": "24k+",
+      "label": "Live orders on shipped systems"
+    },
+    {
+      "value": "580+",
+      "label": "Automated tests written"
     },
     {
       "value": "3",
       "label": "Years graphic design"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Panetti Analytics",
+      "category": "Full-stack e-commerce profit & affiliate analytics",
+      "status": "Live · private platform",
+      "summary": "An in-house replacement for a paid SaaS (BeProfit) that consolidates 8 WooCommerce stores across 5 currencies into one true-profit dashboard, plus a self-service portal for brand ambassadors to track their own sales and commission.",
+      "highlight": "Fully test-driven and typed end to end, with hourly cron sync and encrypted store credentials. Live in production with 24,000+ real orders.",
+      "metrics": [
+        { "value": "24,000+", "label": "Real orders live" },
+        { "value": "8", "label": "WooCommerce stores" },
+        { "value": "5", "label": "Currencies unified" },
+        { "value": "~410", "label": "Automated tests" }
+      ],
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Prisma",
+        "PostgreSQL (Neon)",
+        "WooCommerce API",
+        "Vercel",
+        "Vitest",
+        "Playwright"
+      ],
+      "images": [
+        { "src": "/images/1-admin-dashboard.png", "alt": "Panetti Analytics admin dashboard showing consolidated true-profit metrics across stores", "width": 2994, "height": 3406 },
+        { "src": "/images/4-shops.png", "alt": "Panetti Analytics multi-store view unifying four of the eight WooCommerce shops", "width": 3024, "height": 1900 }
+      ]
     },
     {
-      "value": "AI",
-      "label": "Claude Code workflow builder"
+      "title": "Underwriting Engine",
+      "category": "AI deal-intake QA & safety layer",
+      "status": "Private · client work",
+      "summary": "The automated quality-assurance and regression layer for an AI-mediated deal-intake system on a UK residential property underwriting platform. An LLM agent reads and drafts; a deterministic validator — never the model — owns every “ready for analysis” and “send” decision.",
+      "highlight": "During a sprint sync, the matrix caught a live production regression silently merging multi-property alerts into one deal. I traced it to the exact commit with git bisect, showed the safety guard was correct but never reached, and filed a verified fix path — without touching any valuation logic.",
+      "metrics": [
+        { "value": "170", "label": "QA-matrix cases" },
+        { "value": "24", "label": "Zero-tolerance safety rules" },
+        { "value": "$0", "label": "Cost to run (fully offline)" },
+        { "value": "38", "label": "Agent-mode safety evals" }
+      ],
+      "tags": [
+        "QA architecture",
+        "Deterministic validation",
+        "LLM-agent safety",
+        "Fixture suites (40 real + 130 synthetic)",
+        "Regression & idempotency testing",
+        "Release-evidence packs",
+        "Audit trails",
+        "git bisect"
+      ],
+      "images": [
+        { "src": "/images/Underwriting-Engine-system-image.png", "alt": "Underwriting Engine QA matrix output showing routing, validation state, and safety-rule assertions", "width": 1882, "height": 991 }
+      ]
     }
   ],
   "selectedWork": [
@@ -60,21 +117,14 @@
       "image": "/images/SSG.png",
       "url": "http://everest.stratfordgensan.com/",
       "summary": "Voting system built for school election workflows with a simple public-facing experience."
-    },
-    {
-      "title": "Pizza Website Design",
-      "category": "UI design",
-      "image": "/images/HOME 1.jpg",
-      "url": "https://drive.google.com/drive/folders/1XDFMyvo756A7y61hmYuyEEJgXyJZekeu?usp=sharing",
-      "summary": "Food website design concept focused on visual hierarchy, product browsing, and conversion layout."
     }
   ],
   "designArchive": [
     {
-      "title": ".inp Files Resource",
-      "type": "Utility file",
-      "image": "/images/icon.jpg",
-      "url": "https://drive.google.com/file/d/17ZvQeRUfA9I0KVIecZ-1Eanag_00acWv/view?usp=sharing"
+      "title": "Pizza Website Design",
+      "type": "UI design",
+      "image": "/images/HOME 1.jpg",
+      "url": "https://drive.google.com/drive/folders/1XDFMyvo756A7y61hmYuyEEJgXyJZekeu?usp=sharing"
     },
     {
       "title": "Nova Shoes Website Design",
@@ -132,19 +182,21 @@
         "React",
         "Next.js",
         "TypeScript",
-        "Laravel",
-        "Django",
+        "Prisma",
         "PostgreSQL",
-        "MongoDB"
+        "Laravel",
+        "Django"
       ]
     },
     {
-      "title": "Automation and AI",
+      "title": "Testing & Automation",
       "items": [
-        "Claude Code",
+        "Test-driven development",
+        "Vitest",
+        "Playwright",
+        "Regression & QA suites",
+        "LLM-agent safety",
         "Web scraping",
-        "Data workflows",
-        "Operational tools",
         "API integration"
       ]
     },
@@ -155,7 +207,7 @@
         "Photoshop",
         "Illustrator",
         "Premiere",
-        "Print layout",
+        "Print & packaging layout",
         "Brand assets"
       ]
     }
