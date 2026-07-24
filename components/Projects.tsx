@@ -16,7 +16,7 @@ const Projects = () => {
             <h2 className="section-title">Products, tools, and systems.</h2>
           </div>
           <p className="body-copy md:ml-auto">
-            Client platforms, storefronts, and automation work shipped to production &mdash;
+            Client platforms, storefronts, and automation work shipped to production,
             each one live or delivered to a real team.
           </p>
         </div>

@@ -29,7 +29,7 @@ const AboutMe = () => {
             <p className="body-copy text-[1.05rem]">
               I am a full-stack developer with real visual design experience. My work sits
               between business systems, user interfaces, automation, and the tests that keep
-              them honest &mdash; which means I understand both the code and how it should
+              them honest, which means I understand both the code and how it should
               look when a real person opens it.
             </p>
 

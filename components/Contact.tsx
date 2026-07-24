@@ -72,7 +72,7 @@ const Contact = () => {
 
             {copied === "failed" ? (
               <p className="text-sm font-bold text-[color:var(--oxide)]">
-                Copy failed &mdash; select the text manually.
+                Copy failed. Select the text manually.
               </p>
             ) : null}
           </div>

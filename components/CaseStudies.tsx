@@ -111,7 +111,7 @@ const CaseStudies = () => {
           <p className="section-kicker">Featured case studies</p>
           <h2 className="section-title">Systems built to be correct, then kept that way.</h2>
           <p className="body-copy">
-            Two production platforms where correctness was the whole job &mdash; a multi-store
+            Two production platforms where correctness was the whole job: a multi-store
             profit engine consolidating real money, and the safety layer that guards an
             AI-mediated underwriting pipeline.
           </p>

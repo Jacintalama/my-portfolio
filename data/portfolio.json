@@ -3,7 +3,7 @@
     "name": "Jacint Alama",
     "eyebrow": "Full-stack developer + visual maker",
     "primaryTitle": "Developer and visual maker.",
-    "summary": "I build production web systems — full-stack platforms, analytics tools, and the automated tests that keep them reliable. I also handle the visual side, from UI to brand and print assets.",
+    "summary": "I build production web systems: full-stack platforms, analytics tools, and the automated tests that keep them reliable. I also handle the visual side, from UI to brand and print assets.",
     "portrait": "/images/hero.png",
     "resumeUrl": "https://drive.google.com/file/d/1eXj_LQnXSE_IeFG04zPGH4W2XimlXUxW/view?usp=sharing"
   },
@@ -59,8 +59,8 @@
       "title": "Underwriting Engine",
       "category": "AI deal-intake QA & safety layer",
       "status": "Private · client work",
-      "summary": "The automated quality-assurance and regression layer for an AI-mediated deal-intake system on a UK residential property underwriting platform. An LLM agent reads and drafts; a deterministic validator — never the model — owns every “ready for analysis” and “send” decision.",
-      "highlight": "During a sprint sync, the matrix caught a live production regression silently merging multi-property alerts into one deal. I traced it to the exact commit with git bisect, showed the safety guard was correct but never reached, and filed a verified fix path — without touching any valuation logic.",
+      "summary": "The automated quality-assurance and regression layer for an AI-mediated deal-intake system on a UK residential property underwriting platform. An LLM agent reads and drafts; a deterministic validator, never the model, owns every “ready for analysis” and “send” decision.",
+      "highlight": "During a sprint sync, the matrix caught a live production regression silently merging multi-property alerts into one deal. I traced it to the exact commit with git bisect, showed the safety guard was correct but never reached, and filed a verified fix path, without touching any valuation logic.",
       "metrics": [
         { "value": "170", "label": "QA-matrix cases" },
         { "value": "24", "label": "Zero-tolerance safety rules" },

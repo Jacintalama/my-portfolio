@@ -10,9 +10,9 @@ import Skills from "@/components/Skills";
 import Head from "next/head";
 import React, { useState } from "react";
 
-const TITLE = "Jacint Alama — Full-stack Developer & Visual Maker";
+const TITLE = "Jacint Alama | Full-stack Developer & Visual Maker";
 const DESCRIPTION =
-  "Jacint Alama builds tested, production-ready web systems — from a multi-store e-commerce profit engine to an AI underwriting QA layer — plus the UI, print, and brand work to match.";
+  "Jacint Alama builds tested, production-ready web systems, from a multi-store e-commerce profit engine to an AI underwriting QA layer, plus the UI, print, and brand work to match.";
 
 const Homepage = () => {
   const [showNav, setShowNav] = useState(false);
