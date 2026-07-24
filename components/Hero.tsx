@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative pt-24 md:pt-28">
       <div className="page-shell">
-        <div className="grid min-h-[calc(100vh-8rem)] items-center gap-10 py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid min-h-[calc(100vh-8rem)] items-center gap-10 py-12 lg:grid-cols-[1.35fr_0.65fr] lg:gap-14">
           <div className="min-w-0">
             <p className="section-kicker hero-rise mb-6" style={{ animationDelay: "40ms" }}>
               {hero.eyebrow}
@@ -74,10 +74,10 @@ const Hero = () => {
           </div>
 
           <div
-            className="hero-rise relative min-w-0"
+            className="hero-rise relative mx-auto w-full max-w-[290px] lg:mx-0 lg:ml-auto"
             style={{ animationDelay: "200ms" }}
           >
-            <div className="ruled-panel relative overflow-hidden p-3 shadow-[10px_10px_0_var(--oxide-soft)]">
+            <div className="ruled-panel relative overflow-hidden p-2.5 shadow-[8px_8px_0_var(--oxide-soft)]">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] bg-[color:var(--paper-soft)]">
                 <Image
                   src={hero.portrait}
@@ -88,13 +88,12 @@ const Hero = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="mt-3 grid grid-cols-[auto_1fr] items-center gap-4 border-t border-[color:var(--line-strong)] pt-4">
-                <span className="font-heading text-4xl font-black leading-none text-[color:var(--oxide)]">
+              <div className="mt-2.5 grid grid-cols-[auto_1fr] items-center gap-3 border-t border-[color:var(--line-strong)] pt-3">
+                <span className="font-heading text-2xl font-black leading-none text-[color:var(--oxide)]">
                   JA
                 </span>
-                <p className="text-sm font-semibold leading-relaxed text-[color:var(--ink-muted)]">
-                  Practical web systems, tested end to end, plus the visual work to
-                  match.
+                <p className="text-[0.8rem] font-semibold leading-snug text-[color:var(--ink-muted)]">
+                  Practical web systems, tested end to end, plus the visual work to match.
                 </p>
               </div>
             </div>
