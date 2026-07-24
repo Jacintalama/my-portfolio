@@ -64,7 +64,6 @@
       "metrics": [
         { "value": "170", "label": "QA-matrix cases" },
         { "value": "24", "label": "Zero-tolerance safety rules" },
-        { "value": "$0", "label": "Cost to run (fully offline)" },
         { "value": "38", "label": "Agent-mode safety evals" }
       ],
       "tags": [

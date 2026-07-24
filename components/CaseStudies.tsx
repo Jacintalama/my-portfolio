@@ -31,12 +31,18 @@ const Shot = ({ img }: { img: CaseImage }) => (
 
 const Metrics = ({ metrics }: { metrics: Metric[] }) => (
   <div className="grid grid-cols-2 gap-px overflow-hidden rounded-md border border-[color:var(--line-strong)] bg-[color:var(--line-strong)]">
-    {metrics.map((m) => (
-      <div key={m.label} className="bg-[color:var(--paper-strong)] p-4 sm:p-5">
-        <span className="metric-value">{m.value}</span>
-        <span className="metric-label">{m.label}</span>
-      </div>
-    ))}
+    {metrics.map((m, i) => {
+      const spanFull = metrics.length % 2 === 1 && i === metrics.length - 1;
+      return (
+        <div
+          key={m.label}
+          className={`bg-[color:var(--paper-strong)] p-4 sm:p-5 ${spanFull ? "col-span-2" : ""}`}
+        >
+          <span className="metric-value">{m.value}</span>
+          <span className="metric-label">{m.label}</span>
+        </div>
+      );
+    })}
   </div>
 );
 
