@@ -11,7 +11,7 @@ const Skills = () => {
         <div className="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div className="section-head">
             <p className="section-kicker">Capabilities</p>
-            <h2 className="section-title">Across code, testing, and visual work.</h2>
+            <h2 className="section-title">Across code, testing, and automation.</h2>
             <p className="body-copy">
               No percentage bars. The useful signal is the kind of work I can take from an
               unclear request to a shipped, tested result.

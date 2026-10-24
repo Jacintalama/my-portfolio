@@ -133,9 +133,10 @@ const CaseStudies = () => {
           <p className="section-kicker">Featured case studies</p>
           <h2 className="section-title">Systems built to be correct, then kept that way.</h2>
           <p className="body-copy">
-            Production platforms I built and kept reliable: a multi-store profit engine
-            consolidating real money, a safety layer guarding an AI-mediated underwriting
-            pipeline, and a from-scratch Swiss commerce marketplace.
+            Production systems I built and kept reliable: a two-bot scraping and pricing
+            automation, a multi-store profit engine consolidating real money, a safety layer
+            guarding an AI-mediated underwriting pipeline, and a from-scratch Swiss commerce
+            marketplace.
           </p>
         </div>
 

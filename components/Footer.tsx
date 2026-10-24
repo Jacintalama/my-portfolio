@@ -24,8 +24,8 @@ const Footer = () => {
             {hero.name}
           </a>
           <p className="mt-4 text-sm leading-7 text-[color:var(--ink-muted)]">
-            Full-stack developer and visual maker building tested, production-ready web
-            systems. Open to roles, contracts, and system builds.
+            Full-stack developer and automation builder making manual work automatic with
+            scrapers, bots, and tested web systems. Open to roles, contracts, and system builds.
           </p>
           <div className="mt-6 flex flex-wrap gap-2.5">
             <a href={`mailto:${contact.email}`} className="print-button px-4 py-2.5 text-[0.78rem]">

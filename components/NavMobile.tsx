@@ -54,7 +54,7 @@ const NavMobile = ({ closeNav, showNav }: Props) => {
           ))}
         </div>
         <p className="text-sm font-semibold leading-6 text-[color:var(--ink-muted)]">
-          Developer, visual maker, and AI-assisted workflow builder.
+          Developer, automation builder, and AI-assisted workflow builder.
         </p>
       </nav>
     </div>

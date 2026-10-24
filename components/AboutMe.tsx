@@ -11,8 +11,8 @@ const roleLanes = [
     text: "Test-driven development, regression matrices, and safety layers that keep AI-assisted and multi-store systems trustworthy in production.",
   },
   {
-    title: "Visual maker",
-    text: "UI concepts, print layouts, product visuals, and brand assets, produced with the Adobe suite and a real eye for how it reads.",
+    title: "Automation builder",
+    text: "Web scrapers and browser bots that take repetitive work off people's hands, get through anti-bot checks, and deliver the data straight into a spreadsheet.",
   },
 ];
 
@@ -27,10 +27,9 @@ const AboutMe = () => {
           </div>
           <div>
             <p className="body-copy text-[1.05rem]">
-              I am a full-stack developer with real visual design experience. My work sits
-              between business systems, user interfaces, automation, and the tests that keep
-              them honest, which means I understand both the code and how it should
-              look when a real person opens it.
+              I help businesses run faster by making manual work automatic. My work sits
+              between scraping, browser automation, business systems, and the tests that
+              keep them honest, so the job keeps running without someone doing it by hand.
             </p>
 
             <Reveal group className="mt-8 grid gap-4">

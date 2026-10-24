@@ -19,10 +19,10 @@ const Hero = () => {
               style={{ animationDelay: "120ms" }}
               aria-label={hero.primaryTitle}
             >
-              <span className="block">Developer</span>
-              <span className="block">and visual</span>
+              <span className="block">I turn</span>
+              <span className="block">manual work</span>
               <span className="block">
-                maker<span className="text-[color:var(--oxide)]">.</span>
+                into automation<span className="text-[color:var(--oxide)]">.</span>
               </span>
             </h1>
 
@@ -93,7 +93,7 @@ const Hero = () => {
                   JA
                 </span>
                 <p className="text-[0.8rem] font-semibold leading-snug text-[color:var(--ink-muted)]">
-                  Practical web systems, tested end to end, plus the visual work to match.
+                  Scrapers, bots, and web systems that do the manual work for you.
                 </p>
               </div>
             </div>

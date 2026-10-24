@@ -1,9 +1,9 @@
 {
   "hero": {
     "name": "Jacint Alama",
-    "eyebrow": "Full-stack developer + visual maker",
-    "primaryTitle": "Developer and visual maker.",
-    "summary": "I build production web systems: full-stack platforms, analytics tools, and the automated tests that keep them reliable. I also handle the visual side, from UI to brand and print assets.",
+    "eyebrow": "Full-stack developer + automation builder",
+    "primaryTitle": "I turn manual work into automation.",
+    "summary": "I help businesses run faster by replacing manual work with automation. I build web scrapers and browser bots that get through anti-bot checks, plus the full-stack systems and tests behind them.",
     "portrait": "/images/hero.png",
     "resumeUrl": "https://drive.google.com/file/d/1eXj_LQnXSE_IeFG04zPGH4W2XimlXUxW/view?usp=sharing"
   },
@@ -21,11 +21,38 @@
       "label": "Automated tests written"
     },
     {
-      "value": "3",
-      "label": "Years graphic design"
+      "value": "13,900+",
+      "label": "Cards tracked by automation"
     }
   ],
   "caseStudies": [
+    {
+      "title": "Cardmarket Monitor",
+      "category": "Two-bot scraping and price automation",
+      "status": "Private · client work",
+      "summary": "Two automations working as one. A Cardmarket bot reads every card in the watched Pokemon sets and finds graded PSA 9 and PSA 10 listings. A second bot then looks up each card's latest PSA sale price on Card Ladder. Both write straight into Google Sheets, and new listings under the client's max price trigger a Telegram alert.",
+      "highlight": "Built to get through Cloudflare's bot check without a person watching: human-paced tab batches, rests between batches, a signed-in browser profile, automatic handling of the \"Verify you are human\" check, and a CAPTCHA-service fallback. All of it runs from a one-click control panel.",
+      "metrics": [
+        { "value": "13,900+", "label": "Cards tracked" },
+        { "value": "250", "label": "Price searches per batch" },
+        { "value": "606", "label": "Automated tests" },
+        { "value": "2", "label": "Bots, one spreadsheet" }
+      ],
+      "tags": [
+        "Node.js",
+        "Playwright",
+        "Web scraping",
+        "Cloudflare bot check",
+        "Google Sheets API",
+        "SQLite",
+        "Telegram alerts",
+        "CapSolver"
+      ],
+      "images": [
+        { "src": "/images/Cardmarket-automation.png", "alt": "Cardmarket Monitor control panel showing the Cardmarket bot activity log and the Card Ladder price search", "width": 1906, "height": 912 },
+        { "src": "/images/cardmarket-sheets.png", "alt": "Google Sheet filled by the automation with PSA listings, current prices and Card Ladder values", "width": 1918, "height": 922 }
+      ]
+    },
     {
       "title": "Panetti Analytics",
       "category": "Full-stack e-commerce profit & affiliate analytics",
@@ -131,62 +158,6 @@
       "summary": "Voting system built for school election workflows with a simple public-facing experience."
     }
   ],
-  "designArchive": [
-    {
-      "title": "Pizza Website Design",
-      "type": "UI design",
-      "image": "/images/HOME 1.jpg",
-      "url": "https://drive.google.com/drive/folders/1XDFMyvo756A7y61hmYuyEEJgXyJZekeu?usp=sharing"
-    },
-    {
-      "title": "Nova Shoes Website Design",
-      "type": "UI design",
-      "image": "/images/shoes.jpg",
-      "url": "https://drive.google.com/drive/folders/1RrVm_uXJgp5r-GnzUz_79Eil6iq8bURV?usp=sharing"
-    },
-    {
-      "title": "Calendar Layout",
-      "type": "Print layout",
-      "image": "/images/homesol2.jpg",
-      "url": "https://drive.google.com/drive/folders/1m50TfMoqLCU1_e9a_k0NoyNIlqvGp96D?usp=sharing"
-    },
-    {
-      "title": "ID Layout",
-      "type": "Print layout",
-      "image": "/images/ID.png",
-      "url": "https://drive.google.com/drive/folders/1GIFOXRgLFF1wybLsBEb1gUQoXNptUSta?usp=sharing"
-    },
-    {
-      "title": "Calling Card",
-      "type": "Brand collateral",
-      "image": "/images/JACKIE.jpg",
-      "url": "https://drive.google.com/drive/folders/1Q6a6ksADDxyrKu3Z0H0XkHk3V83RKEsA?usp=sharing"
-    },
-    {
-      "title": "Posters",
-      "type": "Graphic design",
-      "image": "/images/poster.jpg",
-      "url": "https://drive.google.com/drive/folders/14T6Y7MgK2I8o2NA1f_3YUDlq4RtcRQgA?usp=sharing"
-    },
-    {
-      "title": "Mobile Design & Product Booth",
-      "type": "Campaign design",
-      "image": "/images/atlantis.jpg",
-      "url": "https://drive.google.com/drive/folders/1UFO6XRSO0H_y41P3apWEoNqNq-eruU94?usp=sharing"
-    },
-    {
-      "title": "Labels",
-      "type": "Packaging design",
-      "image": "/images/labels.jpg",
-      "url": "https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing"
-    },
-    {
-      "title": "Packaging Box Layout",
-      "type": "Packaging design",
-      "image": "/images/box.PNG",
-      "url": "https://drive.google.com/drive/folders/1INxHNvlKp3uK0EWYwoP2wqueA3Xdt2tn?usp=sharing"
-    }
-  ],
   "capabilityGroups": [
     {
       "title": "Development",
@@ -201,26 +172,25 @@
       ]
     },
     {
-      "title": "Testing & Automation",
+      "title": "Testing & QA",
       "items": [
         "Test-driven development",
         "Vitest",
         "Playwright",
         "Regression & QA suites",
         "LLM-agent safety",
-        "Web scraping",
         "API integration"
       ]
     },
     {
-      "title": "Visual Production",
+      "title": "Scraping & Automation",
       "items": [
-        "UI design",
-        "Photoshop",
-        "Illustrator",
-        "Premiere",
-        "Print & packaging layout",
-        "Brand assets"
+        "Playwright browser automation",
+        "Web scraping",
+        "Cloudflare bot check handling",
+        "Google Sheets API",
+        "Scheduled jobs",
+        "Telegram alerts"
       ]
     }
   ],
