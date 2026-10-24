@@ -15,9 +15,10 @@ export default function Document() {
           name="google-site-verification"
           content="6kb8nQZgMrOo_-nxc6-K6hzXVhXtAwjDP_zFWo8MHMA"
         />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+        <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
       </Head>
       <body className="font-primary antialiased">
         <Main />
